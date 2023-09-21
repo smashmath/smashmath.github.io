@@ -1,73 +1,84 @@
 ---
-layout: page
+layout: distill
 title: Introduction to Least Squares
 date: 2021-10-7
 description: How to find the best solution for an inconsistent system
 comments: true
 importance: 3
 categories: linear-algebra
+authors:  
+  - name: Taylor F.
+    url: ""
+    affiliations:
+      name: None
+toc:
+  - name: Intro
+  - name: An Application
+  - name: Further Questions
 ---
 
-Suppose we have two vectors $$\vec{v},\vec{b}\in\mathbb{R}^n$$
+## Intro
+
+Suppose we have two vectors $$\mathbf{v},\mathbf{b}\in\mathbb{R}^n$$
 
 The system
 
 \begin{equation} \label{1}
-\vec{v}x=\vec{b}
+\mathbf{v}x=\mathbf{b}
 \end{equation}
 
-in all likelihood has no solution unless $$\vec{b}$$ happens to be a scalar multiple of $$\vec{v}$$. So, let us attempt to find the value of $$x$$ which gives the best approximation.
+in all likelihood has no solution unless $$\mathbf{b}$$ happens to be a scalar multiple of $$\mathbf{v}$$. So, let us attempt to find the value of $$x$$ which gives the best approximation.
 
-To measure how accurate our solution is in terms of $$x$$, we can simply deal with the magnitude of the difference between $$\vec{v}x$$ and $$\vec{b}$$. We use the magnitude squared as it makes calculations easier and has no effect on the solution.
+To measure how accurate our solution is in terms of $$x$$, we can simply deal with the magnitude of the difference between $$\mathbf{v}x$$ and $$\mathbf{b}$$. We use the magnitude squared as it makes calculations easier and has no effect on the solution.
 
-\begin{equation} \label{2}
-\delta(x)= | \vec{v}x-\vec{b} | ^2
-\end{equation}
+$$
+\delta(x)= | \mathbf{v}x-\mathbf{b} | ^2
+$$
 
 We can take advantage of the fact that for real vectors,
-$$| \vec{v}| ^2=\vec{v}^T\vec{v}$$.
-Note also that for real vectors $$\vec{v}^T\vec{b}=\vec{v}\cdot \vec{b}$$.
+$$| \mathbf{v}| ^2=\mathbf{v}^T\mathbf{v}$$.
+Note also that for real vectors $$\mathbf{v}^T\mathbf{b}=\mathbf{v}\cdot \mathbf{b}$$.
 
-\begin{gather} \label{3}
-|\vec{v}x-\vec{b}|^2=(\vec{v}x-\vec{b})^T(\vec{v}x-\vec{b})\\
-\delta(x)=\vec{v}^T\vec{v}x^2-(\vec{v}^T\vec{b}+\vec{b}^T\vec{v})x+\vec{b}^T\vec{b}
-\end{gather}
+$$\begin{gather*}
+|\mathbf{v}x-\mathbf{b}|^2=(\mathbf{v}x-\mathbf{b})^T(\mathbf{v}x-\mathbf{b})\\
+\delta(x)=\mathbf{v}^T\mathbf{v}x^2-(\mathbf{v}^T\mathbf{b}+\mathbf{b}^T\mathbf{v})x+\mathbf{b}^T\mathbf{b}
+\end{gather*}$$
 
-Being $$1\times1$$ matrices, $$\vec{b}^T\vec{v}=\vec{v}^T\vec{b}$$
+Being $$1\times1$$ matrices, $$\mathbf{b}^T\mathbf{v}=\mathbf{v}^T\mathbf{b}$$
 
-\begin{equation} \label{4}
-\delta(x)=\vec{v}^T\vec{v}x^2-2(\vec{v}^T\vec{b})x+\vec{b}^T\vec{b}
-\end{equation}
+$$
+\delta(x)=\mathbf{v}^T\mathbf{v}x^2-2(\mathbf{v}^T\mathbf{b})x+\mathbf{b}^T\mathbf{b}
+$$
 
 Solve for $$\delta'(x)=0$$
 
-\begin{equation} \label{5}
-\delta'(x)=2\vec{v}^T\vec{v}x-2(\vec{v}^T\vec{b})=0
-\end{equation}
+$$
+\delta'(x)=2\mathbf{v}^T\mathbf{v}x-2(\mathbf{v}^T\mathbf{b})=0
+$$
 
 \begin{equation} \label{6}
-x=\frac{\vec{v}^T\vec{b}}{\vec{v}^T\vec{v}}=\frac{\vec{v}\cdot \vec{b}}{|\vec{v}|^2}
+x=\frac{\mathbf{v}^T\mathbf{b}}{\mathbf{v}^T\mathbf{v}}=\frac{\mathbf{v}\cdot \mathbf{b}}{|\mathbf{v}|^2}
 \end{equation}
 
-Look at that! It's the coefficient for the projection of a vector $$\vec{b}$$ onto $$\vec{v}$$. Looks like we were on the right track all along!
+Look at that! It's the coefficient for the projection of a vector $$\mathbf{b}$$ onto $$\mathbf{v}$$. And this should be a relatively intuitive answer to get. We can interpret the question of $$\mathbf{v}x=\mathbf{b}$$ as traveling along the line spanned by $$\mathbf{v}$$, and seeing where we get closest to the vector $$\mathbf{b}$$. And it hopefully makes sense that this should be the projection. I encourage you to draw it out and justify it to yourself!
 
-If we go back a step and multiply both sidesof \eqref{6} by $$\vec{v}^T\vec{v}$$, we get
+If we go back a step and multiply both sides of \eqref{6} by $$\mathbf{v}^T\mathbf{v}$$, we get
 
-\begin{equation} \label{7}
-(\vec{v}^T\vec{v})x=\vec{v}^T\vec{b}
-\end{equation}
+$$ \label{7}
+(\mathbf{v}^T\mathbf{v})x=\mathbf{v}^T\mathbf{b}
+$$
 
-Which is exactly the equation we started with \eqref{1} just with both sides multiplied by $$\vec{v}^T$$. And indeed, the best approximate solution (also called the least squares solution) of an inconsistent system
+Which is exactly the equation we started with \eqref{1} just with both sides multiplied by $$\mathbf{v}^T$$. And indeed, the best approximate solution (also called the least squares solution) of an inconsistent system
 
-$$A\vec{x}=\vec{b}$$
+$$\mathbf{A}\mathbf{x}=\mathbf{b}$$
 
-is found by instead solving the "normal equation of $$A\vec{x}=\vec{b}$$"
+is found by instead solving the "normal equation of $$\mathbf{A}\mathbf{x}=\mathbf{b}$$"
 
-\begin{equation} \label{8}
-A^TA\vec{x}=A^T\vec{b}
-\end{equation}
-
-One thing to note: $$A^TA$$ will be invertible if and only if the columns of $$A$$ are linearly independent.
+$$ \label{8}
+\mathbf{A}^T\mathbf{A}\mathbf{x}=\mathbf{A}^T\mathbf{b}
+$$
+equation
+One thing to note: $$\mathbf{A}^T\mathbf{A}$$ will be invertible if and only if the columns of $$\mathbf{A}$$ are linearly independent.
 
 ## An Application
 
@@ -79,39 +90,48 @@ c_0+c_1x_1=y_1\\
 c_0+c_1x_n=y_n
 \end{gather*}$$
 
-Of course, we can express this as s system of equations:
+Of course, we can express this as a system of equations:
 
-$$\begin{equation}
+$$
 \begin{bmatrix}1&x_1\\\vdots&\vdots\\1&x_n\end{bmatrix}\begin{bmatrix}c_0\\c_1\end{bmatrix}=\begin{bmatrix}y_1\\\vdots\\y_n\end{bmatrix}
-\end{equation}$$
+$$
 
 Let's not be naive. This system probably has no solution. In which case, we can multiply by the transpose of the coefficient matrix to get the normal equation. Do observe that the columns will be linearly independent unless $$x_1=x_2=\ldots=x_n$$ (which would be dumb).
 
-$$\begin{equation}
+$$
 \begin{bmatrix}1&\dots&1\\x_1&\dots&x_n\end{bmatrix}
 \begin{bmatrix}1&x_1\\\vdots&\vdots\\1&x_n\end{bmatrix}\begin{bmatrix}c_0\\c_1\end{bmatrix}=
 \begin{bmatrix}1&\dots&1\\x_1&\dots&x_n\end{bmatrix}
 \begin{bmatrix}y_1\\\vdots\\y_n\end{bmatrix}
-\end{equation}$$
+$$
 
-If we denote the vectors $$\vec{1}=(1,\ldots,1)\in\mathbb{R}^n$$, $$\vec{x}=(x_1,\ldots,x_n)$$, and $$\vec{y}=(y_1,\ldots,y_n)$$, the system becomes
+If we denote the vectors $$\mathbf{1}=(1,\ldots,1)\in\mathbb{R}^n$$, $$\mathbf{x}=(x_1,\ldots,x_n)$$, and $$\mathbf{y}=(y_1,\ldots,y_n)$$, the system becomes
 
-$$\begin{equation}
-\begin{bmatrix}n&\vec{1}\cdot\vec{x}\\\vec{1}\cdot\vec{x}&|\vec{x}|^2\end{bmatrix}
+$$
+\begin{bmatrix}n&\mathbf{1}\cdot\mathbf{x}\\\mathbf{1}\cdot\mathbf{x}&|\mathbf{x}|^2\end{bmatrix}
 \begin{bmatrix}c_0\\c_1\end{bmatrix}=
-\begin{bmatrix}\vec{1}\cdot\vec{y}\\\vec{x}\cdot\vec{y}\end{bmatrix}
-\end{equation}$$
+\begin{bmatrix}\mathbf{1}\cdot\mathbf{y}\\\mathbf{x}\cdot\mathbf{y}\end{bmatrix}
+$$
 
 If you think I'm going to row reduce this, you are out of your mind. Cramer's Rule is bae once again :sunglasses:
 
-$$\begin{equation}
-c_0=\frac{\begin{vmatrix}\vec{1}\cdot\vec{y}&\vec{1}\cdot\vec{x}\\\vec{x}\cdot\vec{y}&|\vec{x}|^2\end{vmatrix}}{\begin{vmatrix}n&\vec{1}\cdot\vec{x}\\\vec{1}\cdot\vec{x}&|\vec{x}|^2\end{vmatrix}},\;
-c_1=\frac{\begin{vmatrix}n&\vec{1}\cdot\vec{y}\\\vec{1}\cdot\vec{x}&\vec{x}\cdot\vec{y}\end{vmatrix}}{\begin{vmatrix}n&\vec{1}\cdot\vec{x}\\\vec{1}\cdot\vec{x}&|\vec{x}|^2\end{vmatrix}}
-\end{equation}$$
+$$
+c_0=\frac{\begin{vmatrix}\mathbf{1}\cdot\mathbf{y}&\mathbf{1}\cdot\mathbf{x}\\\mathbf{x}\cdot\mathbf{y}&|\mathbf{x}|^2\end{vmatrix}}{\begin{vmatrix}n&\mathbf{1}\cdot\mathbf{x}\\\mathbf{1}\cdot\mathbf{x}&|\mathbf{x}|^2\end{vmatrix}},\;
+c_1=\frac{\begin{vmatrix}n&\mathbf{1}\cdot\mathbf{y}\\\mathbf{1}\cdot\mathbf{x}&\mathbf{x}\cdot\mathbf{y}\end{vmatrix}}{\begin{vmatrix}n&\mathbf{1}\cdot\mathbf{x}\\\mathbf{1}\cdot\mathbf{x}&|\mathbf{x}|^2\end{vmatrix}}
+$$
 
 And you could always use my [determinant polynomial](../functioninterp/){:target="_blank"} to get the equation for the line of best fit as
 
-$$\begin{equation}
-y=\frac{\begin{vmatrix}1&x&0\\n&\vec{1}\cdot\vec{x}&\vec{1}\cdot\vec{y}\\\vec{1}\cdot\vec{x}&|\vec{x}|^2&\vec{x}\cdot\vec{y}\end{vmatrix}}
+$$
+y=\frac{\begin{vmatrix}1&x&0\\n&\mathbf{1}\cdot\mathbf{x}&\mathbf{1}\cdot\mathbf{y}\\\mathbf{1}\cdot\mathbf{x}&|\mathbf{x}|^2&\mathbf{x}\cdot\mathbf{y}\end{vmatrix}}
 {n(x_1^2+\ldots+x_n^2)-(x_1+\ldots+x_n)^2}
-\end{equation}$$
+$$
+
+## Further Questions
+
+Some questions to ponder.
+
+1. Why is $$\mathbf{A}^T\mathbf{A}\mathbf{x}=\mathbf{A}^T\mathbf{b}$$ guaranteed a solution?
+2. Why would the solution to the normal equation actually be the "closest" solution?
+
+These are questions I plan to tackle in an updated least squares post soon.
