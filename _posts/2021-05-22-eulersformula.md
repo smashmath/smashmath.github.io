@@ -5,7 +5,7 @@ date: 2021-05-22 0
 description: the best formula
 comments: true
 importance: 1
-tags: calculus
+categories: calculus
 ---
 
 Say you were a curious mathematician investigating what happens if you evaluate something like $$e^{ix}$$. How do you multiply something $$i$$ times? Well don't think of exponentiation as repeated multiplication, because it's not, really. Instead, think of exponentiation of $$e$$ as being *defined* by
