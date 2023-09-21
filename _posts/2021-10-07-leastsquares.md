@@ -17,6 +17,8 @@ toc:
   - name: Further Questions
 ---
 
+Note: Updated 09/21/23.
+
 ## Intro
 
 Suppose we have two vectors $$\mathbf{v},\mathbf{b}\in\mathbb{R}^n$$
