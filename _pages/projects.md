@@ -3,7 +3,7 @@ layout: page
 title: my math stuff
 permalink: /math/
 description: i wrote these
-nav: true
+nav: false
 display_categories: [differential equations, systems of differential equations,linear algebra, calculus, works in progress, archive]
 horizontal: false
 ---
