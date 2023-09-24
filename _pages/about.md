@@ -8,8 +8,8 @@ profile:
   align: right
   image: pic.jpg
   address: > 
-    <p>Taylor F.</p> 
-    <p>discord: nilpotentnix</p>   
+    <p>Taylor Grant</p> 
+    <p>discord: taylornix</p>   
     <p>e</p> 
     <p>california CA</p>
     <p>this is not actually a picture of me (see photo credit below)</p>  
@@ -23,9 +23,11 @@ social: true  # includes social icons at the bottom of the page
 
 $$\exp(x)=\sum_{n=0}^\infty \frac{x^n}{n!}$$
 
-local boy does math. "is okay at it" says friends and family.
+math phd student, dork extraordinaire.
 
-[here are some math posts ive written if you want to look at them i guess](./math){:target="_blank"}
+i like differential equations and linear algebra.
+
+[here are some math posts ive written if you want to look at them i guess](./blog){:target="_blank"}
 
 ---
 

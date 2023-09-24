@@ -7,7 +7,7 @@ comments: true
 importance: 1
 categories: calculus
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

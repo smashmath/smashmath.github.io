@@ -8,7 +8,7 @@ importance: 2
 categories: differential-equations
 tags: best 
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

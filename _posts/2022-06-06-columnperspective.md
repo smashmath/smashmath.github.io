@@ -8,7 +8,7 @@ importance: 1
 categories: linear-algebra
 tags: best 
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

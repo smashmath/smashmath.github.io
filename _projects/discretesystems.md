@@ -7,7 +7,7 @@ comments: true
 importance: 3
 category: works in progress
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

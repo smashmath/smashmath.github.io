@@ -7,7 +7,7 @@ comments: true
 importance: 3
 category: systems of differential equations
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

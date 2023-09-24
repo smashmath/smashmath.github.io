@@ -8,7 +8,7 @@ importance: 6
 tags: matrix-exponentials
 categories: archive
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

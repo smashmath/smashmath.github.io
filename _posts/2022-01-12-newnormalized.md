@@ -8,7 +8,7 @@ importance: 3
 categories: differential-equations
 tags: normalized-solutions 
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None

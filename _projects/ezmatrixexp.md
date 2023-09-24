@@ -7,7 +7,7 @@ comments: true
 importance: 6
 category: archive
 authors:  
-  - name: Taylor F.
+  - name: Taylor Grant
     url: ""
     affiliations:
       name: None
