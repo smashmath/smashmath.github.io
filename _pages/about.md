@@ -35,7 +35,7 @@ personal favorites:
 
 - [The Alpha Method (Generalized Exponential Response Formula)](./blog/alphamethod){:target="_blank"}
 - [Shortcuts for Finding Eigenvalues and Eigenvectors](./blog/eigentricks){:target="_blank"}
-- [Solving systems of first-order ODEs like a boss](./blog/firstordersystemsquick){:target="_blank"}
+- [Solving systems of first-order ODEs like a baller](./blog/firstordersystemsquick){:target="_blank"}
 
 ---
 
