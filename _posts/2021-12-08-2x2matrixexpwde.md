@@ -236,7 +236,7 @@ $$e^{\lambda It}=e^{\lambda t}I$$
 
 # Applications
 
-For ways to apply matrix exponentials to solve $$2\times2$$ systems of differential equations, check out [this post](../firstordersystemsquick){:target="_blank"} on solving them like a boss.
+For ways to apply matrix exponentials to solve $$2\times2$$ systems of differential equations, check out [this post](../firstordersystemsquick){:target="_blank"} on solving them like a baller.
 
 Closing Remarks
 -

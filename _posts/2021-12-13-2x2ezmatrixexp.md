@@ -365,7 +365,7 @@ Then you could solve it like a normal initial value problem. If you want, I gues
 
 # Applications
 
-For ways to apply matrix exponentials to solve $$2\times2$$ systems of differential equations, check out [this post](../firstordersystemsquick){:target="_blank"} on solving them like a boss.
+For ways to apply matrix exponentials to solve $$2\times2$$ systems of differential equations, check out [this post](../firstordersystemsquick){:target="_blank"} on solving them like a baller.
 
 It's also possible to find very similar formulas for $$A^n$$ using these methods. The formulas for the $$2\times2$$ cases are *extremely* similar to the formulas derived here.
 

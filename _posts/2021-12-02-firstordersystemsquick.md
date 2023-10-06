@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Solving systems of first-order ODEs like a boss
+title: Solving systems of first-order ODEs like a baller
 date: 2021-12-02 0
 description: some ballin' tips and tricks
 comments: true
