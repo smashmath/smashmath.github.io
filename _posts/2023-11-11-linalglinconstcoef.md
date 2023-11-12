@@ -66,7 +66,13 @@ Assume the equation $$T(x)=b$$ (which is asking the question "what is a preimage
 
 **Proof:** If $$x_0$$ is a vector of the form $$x_0=x_p+x_h$$, then $$T(x_0)=T(x_p+x_h)=T(x_p)+T(x_h)=b+0=b$$. Hence, $$x_0$$ is also a preimage of $$b$$, showing that any vector of this form is also a solution.
 
-Suppose we have some other solution $$x_1$$. Then $$T(x_1-x_p)=T(x_1)-T(x_p)=b-b=0$$. Hence, $$x_1-x_p\in\ker(T)$$, so $$x_1-x_p=x_h$$ for some $$x_h\in\ker(T)$$, and thus $$x_1=x_p+x_h$$, concluding the proof.
+Suppose we have some other solution $$x_1$$. Then $$T(x_1-x_p)=T(x_1)-T(x_p)=b-b=0$$. Hence, $$x_1-x_p\in\ker(T)$$, so $$x_1-x_p=x_h$$ for some $$x_h\in\ker(T)$$, and thus $$x_1=x_p+x_h$$, concluding the proof. $$\square$$
+
+This last step actually implies that a **general solution** to $$T(x)=b$$ is an expression of the form
+
+$$x=c_1x_1+\ldots+c_nx_n+x_p$$
+
+where $$x_1,\ldots,x_n$$ form a basis for $$\ker(T)$$ and $$x_p$$ is any particular solution. This is because if for any solution $$x-x_p\in\ker(T)$$, then by establishing a basis $$x_1,\ldots,x_n$$ we are saying that $$x-x_p$$ can be written in the form $$c_1x_1+\ldots+c_nx_n$$.
 
 ## Eigenvectors
 
@@ -100,8 +106,9 @@ $$\implies p(T)x=a_0x+a_1T(x)+\ldots+a_nT^n(x)$$
 
 Here are some insanely important facts
 
-1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof). However, $$P(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$.
-2. The kernel is just a subset of the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
+1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof).
+2. $$P(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$.
+3. The kernel is just a subset of the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
 
 # The Differential Operator
 
@@ -121,15 +128,17 @@ The differential equation
 a_ny^{(n)}+\ldots+a_1y'+a_0y=g(t)
 \end{equation}
 
-is just the equation $$p(D)y=g(t)$$, where $$p(x)=a_nx^n+\ldots+a_1x+a_0$$. That is, we are looking for preimages of $$g(t)$$ under $$p(D)$$, and every solution will be of the form $$y=y_p+y_h$$ whewere $$y_p$$ is some preimage of $$g(t)$$, and $$y_h$$ is an eigenvector of $$p(D)$$ with eigenvalue zero (it is in the kernel of $$p(D)$$). Note that because the kernel is always a subspace, this gives us the superposition property of homogeneous solutions for free.
+is just the equation $$p(D)y=g(t)$$, where $$p(x)=a_nx^n+\ldots+a_1x+a_0$$. That is, we are looking for preimages of $$g(t)$$ under $$p(D)$$, and every solution will be of the form $$y=y_p+y_h$$ where $$y_p$$ is some preimage of $$g(t)$$, and $$y_h$$ is an eigenvector of $$p(D)$$ with eigenvalue zero (it is in the kernel of $$p(D)$$). Note that because the kernel is always a subspace, this gives us the superposition property of homogeneous solutions for free.
 
-If we find an expression for $$y$$ such that it encompasses every solution, then we call it the **general solution**. To do so, we need a basis of the kernel $$\{y_1,\ldots,y_n\}$$ such that any solution $$y$$ can be written as
+i.e. If $$y_1,\ldots,y_n$$ are solutions to $$p(D)y=0$$, then so will $$c_1y_1+\ldots+c_ny_n$$.
 
-$$y=y_p+c_1y_1+\ldots+c_ny_n$$
+As before, to find the **general solution**, we need a basis $$\{y_1,\ldots,y_k\}$$ of the kernel of $$p(D)$$. Then, any solution $$y$$ can be written as
 
-So how can we start to find a basis for the kernel? Well, we can start with eigenvectors of $$D$$ with eigenvalue $$\lambda$$ such that $$p(\lambda)=0$$. And there we go: the characteristic polynomial is now something extremely obvious, and we have yet to even *mention* exponentials.
+$$y=y_p+c_1y_1+\ldots+c_ky_k$$
 
-So now we are looking for functions $$y$$ such that $$Dy=\lambda y$$.
+So how can we start to find a basis for the kernel? And how many vectors will be in it? Well, we know that any eigenvector of $$D$$ with eigenvalue $$\lambda$$ will be an eigenvector of $$p(D)$$ with eigenvalue $$p(\lambda)$$. So we can try to find some solutions by solving $$p(\lambda)=0$$. And there we go: the characteristic polynomial is now something extremely obvious, and we have yet to even *mention* exponentials.
+
+Let $$\lambda$$ be any solution to $$p(\lambda)=0$$. Now we are looking for eigenvectors $$y$$ such that $$Dy=\lambda y$$.
 
 # The Most Important ODE
 
@@ -139,11 +148,11 @@ y'=ay
 
 Yeah, I said it.
 
-Now, let's try to solve this. Well, this differential equation says that the rate of change is proportional to the value of the function. With proportionality constant
+Now, let's try to solve this. Well, this differential equation says that the rate of change is proportional to the value of the function. We can see $$y=0$$ trivially satisfies the equation, so we can accept that $$y=0$$ is a possible solution and just assume that $$y\neq0$$ to consider the proportionality constant
 
 $$\frac{y'}{y}=a$$
 
-If $$y=0$$, then this is trivially true. So we can accept that $$y=0$$ is a possible solution, and assume that $$y\neq0$$ to get the others. But, wait. $$\frac{y'}{y}=\frac{d}{dt}\ln\left\lvert y \right\rvert$$. So $$\frac{d}{dt}\ln\left\lvert y \right\rvert=a$$. That is,
+But, wait. $$\frac{y'}{y}=\frac{d}{dt}\ln\left\lvert y \right\rvert$$. So $$\frac{d}{dt}\ln\left\lvert y \right\rvert=a$$. That is,
 
 $$\ln\left\lvert y \right\rvert=at+c\implies \left\lvert y \right\rvert=e^ce^{at}$$
 
@@ -155,9 +164,9 @@ We have demonstrated that $$y'=ay\implies y\in\operatorname{span}(e^{at})$$, and
 
 $$\frac{d}{dt}\left(\frac{y_2}{y_1}\right)=\frac{y_1y_2'-y_2y_1'}{y_1^2}$$
 
-$$=\frac{y_1ay_2-y_2ay_1}{y_1^2}=0$$
+$$=\frac{y_1(ay_2)-y_2(ay_1)}{y_1^2}=0$$
 
-So $$\frac{y_2}{y_1}$$ is just some constant $$C$$, which implies that $$y_2$$ is necessarily linearly dependent on $$y_1$$. Therefore, we've shown that the solution space of $$y'=ay$$ (which is just $$(D-a)y=0$$: the kernel of $$D-a$$) has dimension exactly 1, and it has a basis $$e^{at}$$. In other words,
+So $$\frac{y_2}{y_1}$$ is just some constant $$C$$, which implies that $$y_2=Cy_1$$, which implies $$y_2$$ is necessarily linearly dependent on $$y_1$$. Therefore, we've shown that the solution space of $$y'=ay$$ (which is just $$(D-a)y=0$$: the kernel of $$D-a$$) has dimension exactly 1, and it has a basis $$e^{at}$$. In other words,
 
 \begin{equation}\label{kerda}
 \ker(D-a)=\operatorname{span}(e^{at})
