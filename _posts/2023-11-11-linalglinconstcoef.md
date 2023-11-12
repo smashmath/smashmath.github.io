@@ -1,10 +1,11 @@
 ---
 layout: distill
-title: The Linear Algebra Perspective of Linear Constant Coefficient ODEs
+title: Constant Coefficient ODEs Made Simple with Linear Operators
 date: 2023-11-11
 description: No more "guessing". This way is intuitive.
-comments: true
+giscus_comments: true
 importance: 1
+featured: true
 tags: best
 category: differential-equations
 authors:
@@ -31,6 +32,8 @@ toc:
 Last year, I made a post about [this same topic](../linconstcoef/){:target="_blank"}, but since then, I have developed a new way of understanding this topic through the lens of linear algebra which makes many of the seemingly arbitrary choices seem almost stupidly obvious. As someone who loves linear algebra and differential equations, I am often talking about it with my friends. One time, I was discussing differential equations with a friend of mine who was taking a class in it at the time. He asked me, "why do we know that the solutions to these equations *have* to be exponentials?" My explanation was not great, but years later I presented the following explanation which I think was much better. In his words, it was "mindblowing". I'm hoping you will feel similarly. **It does, however, require linear algebra.**
 
 We will address the following questions in the context of constant coefficient linear ordinary differential equations:
+
+$$a_ny^{(n)}+\ldots+a_1y'+a_0y=0$$
 
 1. Why is our guess for the solution $$e^{rt}$$?
 2. Why does a second order equation have exactly two linearly independent homogeneous solutions?
@@ -59,7 +62,7 @@ If the image of an element $$x$$ is $$0$$ ($$T(x)=0$$), then we say that $$x$$ i
 The **image** of $$T$$ is the set of all possible images. It is essentially the "range" of the transformation. The image is also a subspace.
 
 ### Preimage Theorem
-Assume the equation $$T(x)=b$$ (which is asking the question "what are all the preimages of b?") has at least one solution, $$x=x_p$$. Then *every* solution is of the form $$x=x_p+x_h$$ where $$x_h$$ is an element in $$\ker(T)$$. That is, **all preimages of a linear transformation are off from a single particular preimage by something in the kernel**.
+Assume the equation $$T(x)=b$$ (which is asking the question "what is a preimage of b?") has at least one solution, $$x=x_p$$. Then *every* solution is of the form $$x=x_p+x_h$$ where $$x_h$$ is an element in $$\ker(T)$$. That is, **all preimages of a linear transformation are off from a single particular preimage by something in the kernel**.
 
 **Proof:** If $$x_0$$ is a vector of the form $$x_0=x_p+x_h$$, then $$T(x_0)=T(x_p+x_h)=T(x_p)+T(x_h)=b+0=b$$. Hence, $$x_0$$ is also a preimage of $$b$$, showing that any vector of this form is also a solution.
 
@@ -99,7 +102,6 @@ Here are some insanely important facts
 
 1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof). However, $$P(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$.
 2. The kernel is just a subset of the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
-3. 
 
 # The Differential Operator
 
