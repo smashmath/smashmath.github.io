@@ -90,8 +90,10 @@ for some integer $$k$$.
 Given a polynomial $$p(x)=a_0+a_1x+\ldots+a_nx^n$$, we define
 
 \begin{equation}
-p(T)=a_0I+a_1T+\ldots+a_nT^n\implies p(T)x=a_0x+a_1T(x)+\ldots+a_nT^n(x)
+p(T)=a_0I+a_1T+\ldots+a_nT^n
 \end{equation}
+
+$$\implies p(T)x=a_0x+a_1T(x)+\ldots+a_nT^n(x)$$
 
 Here are some insanely important facts
 
