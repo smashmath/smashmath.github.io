@@ -246,9 +246,12 @@ De^{at}=e^{at}(D+a),\quad e^{at}D=(D-a)e^{at}
 
 I encourage you to prove that linearity actually guarantees that
 
-\begin{equation}
-p(D)e^{at}=e^{at}p(D+a),\quad e^{at}p(D)=p(D-a)e^{at}
-\end{equation}
+$$
+\begin{gather}
+p(D)e^{at}=e^{at}p(D+a)\\
+e^{at}p(D)=p(D-a)e^{at}
+\end{gather}
+$$
 
 And this is going to make our lives *so* much easier. Let's go back to
 
@@ -256,7 +259,9 @@ $$(D-a)y=0$$
 
 If we multiply by $$e^{-at}$$, then we can change that pesky $$D-a$$ into just $$D$$. That is,
 
-$$e^{-at}(D-a)y=(D-(-a)-a)e^{-at}y=D(e^{-at}y)=0$$
+$$e^{-at}(D-a)y=(D-(-a)-a)e^{-at}y$$
+
+$$=D(e^{-at}y)=0$$
 
 And if $$e^{-at}y$$ is in the kernel of $$D$$, then it's just a constant. So $$e^{-at}y=C\implies y=Ce^{at}$$. If you look at what we did closely, you'll notice we basically just did an integrating factor without doing an integrating factor.
 
