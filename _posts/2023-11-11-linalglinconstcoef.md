@@ -21,11 +21,12 @@ toc:
       - name: Linear Operators and Polynomials
   - name: The Differential Operator
   - name: The Most Important ODE
-  - name: Second Order. Two Independent Solutions
   - name: Repeated Roots
     subsections:
       - name: Exponential Shift
       - name: Exponential Shift Into Overdrive
+  - name: Exponential Response Formula
+  - name: Second Order. Two Independent Solutions
   - name: Complex Stuff
 ---
 
@@ -36,8 +37,8 @@ We will address the following questions in the context of constant coefficient l
 $$a_ny^{(n)}+\ldots+a_1y'+a_0y=0$$
 
 1. Why is our guess for the solution $$e^{rt}$$?
-2. Why does a second order equation have exactly two linearly independent homogeneous solutions?
-3. Why do we multiply by $$t$$ when we have a repeated root of the characteristic polynomial?
+2. Why do we multiply by $$t$$ when we have a repeated root of the characteristic polynomial?
+3. Why does a second order equation have exactly two linearly independent homogeneous solutions?
 
 And as a bonus, I'm going to explain why the **exponential response formula** is actually absurdly trivial!
 
@@ -109,6 +110,7 @@ Here are some insanely important facts
 1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof).
 2. $$P(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$.
 3. The kernel is just a subset of the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
+4. Polynomials in an operator commute. That is, for all polynomials $$p,q$$, $$p(T)q(T)=q(T)p(T)$$.
 
 # The Differential Operator
 
@@ -166,7 +168,7 @@ $$\frac{d}{dt}\left(\frac{y_2}{y_1}\right)=\frac{y_1y_2'-y_2y_1'}{y_1^2}$$
 
 $$=\frac{y_1(ay_2)-y_2(ay_1)}{y_1^2}=0$$
 
-So $$\frac{y_2}{y_1}$$ is just some constant $$C$$, which implies that $$y_2=Cy_1$$, which implies $$y_2$$ is necessarily linearly dependent on $$y_1$$. Therefore, we've shown that the solution space of $$y'=ay$$ (which is just $$(D-a)y=0$$: the kernel of $$D-a$$) has dimension exactly 1, and it has a basis $$e^{at}$$. In other words,
+So $$\frac{y_2}{y_1}$$ is just some constant $$C$$, which implies that $$y_2=Cy_1$$, which implies $$y_2$$ is necessarily linearly dependent on $$y_1$$. Therefore, we've shown that the solution space of $$y'=ay$$ (which is just $$(D-a)y=0$$: the kernel of $$(D-a)$$) has dimension exactly 1, and it has a basis $$e^{at}$$. In other words,
 
 \begin{equation}\label{kerda}
 \ker(D-a)=\operatorname{span}(e^{at})
@@ -192,40 +194,7 @@ will be a solution to $$p(D)y=0$$. Note: we do not say the *general* solution qu
 
 We remark that \eqref{kerda} equivalently tells us that if $$q(x)$$ is a degree one polynomial, then $$\ker(q(D))$$ has a basis $$\{e^{at}\}$$ for $$a$$ such that $$q(a)=0$$, implying that the general solution to $$q(D)y=0$$ is $$y=Ce^{at}$$.
 
-We actually have enough now to prove that an $$n$$th order equation has homogeneous solution space of dimension exactly $$n$$.
-
-# Second Order. Two Independent Solutions
-
-We can prove that \eqref{kerda} actually generalizes to $$n$$th order equations by induction. Instead of doing the full induction proof, I will do the extension from first order to second order (the full proof has an essentially identical process).
-
-Suppose $$p(x)$$ is a second degree polynomial. Then $$p(x)=(x-a)q(x)$$ where $$q(x)$$ is a degree one polynomial (this is guaranteed by the fundamental theorem of algebra, meaning $$a$$ can be complex). Hence,
-
-$$p(D)y=0\implies (D-a)q(D)y=0$$
-
-$$\implies q(D)y\in\ker(D-a)$$
-
-\eqref{kerda} then tells us that $$q(D)y=c_2e^{at}$$. We know we can find a particular solution to $$q(D)y=e^{at}$$ (which we will call $$y_2$$) by using an [integrating factor](../integratingfactor/){:target="_blank"}, since it's first order$$^{[1]}$$.
-
-<details>
-  <summary style="color:white;">[1]</summary>
-    <p>ok to generalize this to nth order i need you Picard–Lindelöf please forgive me</p>
-</details>
-
-That is, $$y_2$$ is a preimage of $$e^{at}$$ under $$q(D)$$, so the general solution to $$q(D)y=e^{at}$$ is $$y=c_1y_1+y_2$$, where $$y_1$$ is a basis for $$\ker(q(D))$$ by the preimage theorem. But, if $$y_2$$ is a preimage of $$e^{at}$$, then $$c_2y_2$$ is a preimage of $$c_2e^{at}$$. Hence, the general solution to $$q(D)y=c_2e^{at}$$ is
-
-$$y=c_1y_1+c_2y_2$$
-
-We claim that $$y$$ is a solution to $$p(D)y=0$$. If we take the image of $$y$$ under $$q(D)$$, we get $$c_2e^{at}$$ as we already showed. But if we then take the image under $$D-a$$, we will get zero by \eqref{kerda}. Hence, $$y$$ is in the kernel of $$(D-a)\circ q(D)=(D-a)q(D)=p(D)$$.
-
-Now, $$y_2$$ cannot be linearly dependent (a scalar multiple of) $$y_1$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{at}\neq0$$ under $$q(D)$$. Hence, $$y_1,y_2$$ form a set of two linearly independent vectors in $$\ker(p(D))$$, making its dimension at least two. We now need to show that there cannot be another linearly independent solution.
-
-Suppose that $$y_3$$ is also a solution to $$p(D)y=0$$ which is linearly independent with $$\{y_1,y_2\}$$. $$y_3$$ can't be in the kernel of $$q(D)$$, because then it would be linearly dependent with $$y_1$$. So $$q(D)y_3\neq0\implies q(D)y_3\in\ker(D-a)$$. That is, $$q(D)y_3=c_3e^{at}$$. But, like before, we know that $$c_3y_2$$ will be a preimage of $$c_3e^{at}$$ under $$q(D)$$, so by the preimage theorem $$y_3=c_3y_2+c_4y_h$$ where $$y_h\in\ker(q(D))$$. But, that means $$c_4y_h=c_5y_1$$, implying $$y_3=c_3y_2+c_5y_1$$, contradicting that $$y_3$$ is linearly independent from $$y_1$$ and $$y_2$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly two!
-
-This answers our second question, **"Why does a second order equation have exactly two linearly independent homogeneous solutions?"**
-
-Because a second order equation is the composition of two degree one operators which each add a dimension to the kernel.
-
-As I mentioned before, this logic does generalize almost exactly to the $$n$$th order case! I encourage you to fill in the details.
+We actually have enough now to prove that an $$n$$th order equation has homogeneous solution space of dimension exactly $$n$$, but I want to take a detour to repeated roots first.
 
 # Repeated Roots
 
@@ -268,19 +237,19 @@ And this is going to make our lives *so* much easier. Let's go back to
 
 $$(D-a)y=0$$
 
-If we multiply by $$e^{-at}$$, then we can change that pesky $$D-a$$ into just $$D$$. That is,
+If we multiply by $$e^{-at}$$, then we can change that pesky $$(D-a)$$ into just $$D$$. That is,
 
 $$e^{-at}(D-a)y=(D-(-a)-a)e^{-at}y$$
 
 $$=D(e^{-at}y)=0$$
 
-And if $$e^{-at}y$$ is in the kernel of $$D$$, then it's just a constant. So $$e^{-at}y=C\implies y=Ce^{at}$$. If you look at what we did closely, you'll notice we basically just did an integrating factor without doing an integrating factor.
+And if $$e^{-at}y$$ is in the kernel of $$D$$, then it's just a constant. So $$e^{-at}y=C\implies y=Ce^{at}$$. If you look at what we did closely, you'll notice we basically just did an [integrating factor](../integratingfactor/){:target="_blank"} without doing an integrating factor.
 
-This is the takeaway: **we can leverage the exponential shift to look at the kernel of just $$D$$**.
+This is the takeaway: **we can leverage the exponential shift to look at the kernel of just $$D$$, which is equivalent to integration**.
 
 ## Exponential Shift Into Overdrive
 
-Alright, so let's answer the question. What happens when we have a repeated root in $$p(x)$$? Say that $$(x-a)^k$$ divides $$p(x)$$. That is, $$p(x)=q(x)(x-a)^k$$. Then if we multiply $$e^{-at}$$ to $$p(D)y=0$$, we get
+Alright, so let's answer the question. What happens when we have a repeated root in $$p(x)$$ in general? Say that $$(x-a)^k$$ divides $$p(x)$$. That is, $$p(x)=q(x)(x-a)^k$$. Then if we multiply $$e^{-at}$$ to $$p(D)y=0$$, we get
 
 $$e^{-at}q(D)(D-a)^ky=q(D+a)D^k(e^{-at}y)$$
 
@@ -292,13 +261,15 @@ $$y=e^{at}\left(c_1+c_2t+\ldots+c_kt^{k-1}\right)$$
 
 is a solution to $$p(D)y=0$$.
 
-And we have now answered our third question, **"Why do we multiply by $$t$$ when we have a repeated root of the characteristic polynomial?"**
+And we have now answered our second question, **"Why do we multiply by $$t$$ when we have a repeated root of the characteristic polynomial?"**
 
-Because exponentials shift derivatives, and the kernel of repeated differentiation is a polynomial.
+*Because exponentials shift derivatives, and the kernel of repeated differentiation is a polynomial.*
 
-This also gives us another way to think about the second question as well. What we have shown essentially implies that every $$n$$th order differential equation of the form $$p(D)y=g(t)$$ can be solved using $$n$$ integrating factors. The first of which can be $$e^{-\lambda t}$$, where $$\lambda$$ is a root of $$p(x)$$. After doing $$n$$ integrations, we will be left with $$n$$ arbitrary constants. This explanation is a bit more handwavy, though, as it does not answer why the functions on each arbitrary constant will necessarily be linearly independent.
+What we have shown also essentially implies that every $$n$$th order differential equation of the form $$p(D)y=g(t)$$ can be solved using $$n$$ integrating factors. The first of which can be $$e^{-\lambda t}$$, where $$\lambda$$ is any root of $$p(x)$$. After doing $$n$$ integrations, we will be left with $$n$$ arbitrary constants. This is consistent with the dimension of the kernel of an $$n$$th order linear equation's solution space being dimension $$n$$, but it does not answer why the functions on each arbitrary constant will necessarily be linearly independent. That is what we intend to prove in [a later section](#second-order-two-independent-solutions).
 
-As a final remark: for constant coefficients, reduction of order *is* just the exponential shift, but more roundabout. This is because you basically insert an exponential into the equation with $$y=ve^{at}$$, which will cause things to shift. For example, if you've done reduction of order on $$y''-2ky'+k^2y=0$$, $$y=e^{kt}v$$, then you do end up with $$v''=0$$. Which is exactly what we would expect:
+But, this actually *does* imply something else very important: A particular solution to $$p(D)y=Be^{at}$$ is guaranteed to exist, and can be obtained by factoring $$p(D)$$, applying integrating factors, and integrating (taking all integration constants to be zero) until it is solved. However, we can actually find this particular solution directly using the exponential response formula, which is what we are going to do next.
+
+As a final remark for this section: for constant coefficients, reduction of order *is* just the exponential shift, but more roundabout. This is because you basically insert an exponential into the equation with $$y=ve^{at}$$, which will cause things to shift. For example, if you've done reduction of order on $$y''-2ky'+k^2y=0$$, $$y=e^{kt}v$$, then you do end up with $$v''=0$$. Which is exactly what we would expect:
 
 $$(D-k)^2e^{kt}v=e^{kt}D^2v=0\implies v''=0$$
 
@@ -310,29 +281,61 @@ Alright, I'm going to prove and motivate the exponential response formula (ERF) 
 
 $$p(D)e^{at}=p(a)e^{at}\implies p(D)\left(\frac{Be^{at}}{p(a)}\right)=Be^{at}$$
 
-is a particular solution. Okay, that's all folks. Seeya next time!
+so $$\frac{Be^{at}}{p(a)}$$ is a particular solution. Okay, that's all folks. Seeya next time!
 
 ---
 
-No, but really, it is that simple. We then get $$\frac{Be^{at}}{p(a)}$$ as a preimage of $$Be^{at}$$ because it's an eigenvector, and we can just divide by the eigenvalue when it's nonzero.
+No, but really, it is that simple. We get $$\frac{Be^{at}}{p(a)}$$ as a preimage of $$Be^{at}$$ because it's an eigenvector, and we can just divide by the eigenvalue when it's nonzero.
 
 We can use some of our techniques here to get the generalized exponential response formula as well. However, it requires a result I don't feel like proving:
 
 **$$p^{(k)}(a)=0$$ for $$0\leq k<m$$ and $$p^{(m)}(a)\neq0$$ if and only if $$a$$ is a root of $$p(x)$$ with multiplicity exactly $$m$$. And $$p(x)=q(x)(x-a)^m$$ where $$q(a)=\frac{p^{(m)}(a)}{m!}\neq0$$**
 
-Then for $$p(D)y=q(D)(D-a)^my=Be^{at}$$, we can use our good ol' exponential shift with $$e^{-at}$$
+Then for $$p(D)y=q(D)(D-a)^my=Be^{at}$$, we can use our good ol' exponential shift with $$e^{-at}$$.
 
 $$q(D+a)D^m(e^{-at}y)=B$$
 
-Letting $$u=D^m(e^{at}y)$$, we get $$q(D+a)u=B$$, where we know that plugging in $$x=0$$ into $$q(x+a)$$ will give us something nonzero. Hence, we can use our ERF to say a particular solution is $$u=\frac{B}{q(0+a)}=\frac{Bm!}{p^{(m)}(a)}$$. That is,
+Letting $$u=D^m(e^{at}y)$$, we get $$q(D+a)u=B$$, where we know that plugging in $$x=0$$ into $$q(x+a)$$ will give us something nonzero. Hence, we can use our ERF to say a particular solution is $$u_p=\frac{B}{q(0+a)}=\frac{Bm!}{p^{(m)}(a)}$$. That is,
 
-$$D^m(e^{-at}y)=\frac{Bm!}{p^{(m)}(a)}$$
+$$D^m(e^{-at}y_p)=u_p=\frac{Bm!}{p^{(m)}(a)}$$
 
 Now, since we're just looking for a single particular solution, we can just integrate $$m$$ times and take all the constants to be $$0$$. And since the $$m$$th integral of $$1$$ is $$\frac{t^m}{m!}$$, we basically just multiply by $$t^m$$ and divide by $$m!$$. Thus,
 
-\begin{equation}
-y=\frac{Bt^me^{at}}{p^{(m)}(a)}
+\begin{equation}\label{gerf}
+y_p=\frac{Bt^me^{at}}{p^{(m)}(a)}
 \end{equation}
+
+and there we go. If $$p^{(k)}(a)=0$$ for $$0\leq k<m$$ and $$p^{(m)}(a)\neq0$$, then \eqref{gerf} is a particular solution to $$p(D)y=Be^{at}$$.
+
+# Second Order. Two Independent Solutions
+
+We can prove that \eqref{kerda}'s implication that a first order equation has kernel of dimension exactly one actually generalizes to $$n$$th order equations by induction. Instead of doing the full induction proof, I will do the extension from first order to second order (the full proof has an essentially identical process).
+
+Suppose $$p(x)$$ is a second degree polynomial. Without loss of generality, we assume $$p$$ is monic. Then $$p(x)=(x-a)(x-b)$$ (this is guaranteed by the fundamental theorem of algebra, meaning $$a$$ and $$b$$ can be complex). Hence,
+
+$$p(D)y=0\implies (D-a)(D-b)y=0$$
+
+$$\implies (D-b)y\in\ker(D-a)$$
+
+\eqref{kerda} then tells us that $$(D-b)y=c_2e^{at}$$. Let us first consider $$(D-b)y=e^{at}$$ (as we can multiply the particular solution by $$c_2$$ to get a solution to the preceeding equation). We know we can get some particular solution $$y_2$$ to $$(D-b)y=e^{at}$$ using the ERF.
+
+That is, $$y_2$$ is a preimage of $$e^{at}$$ under $$(D-b)$$, so the general solution to $$(D-b)y=e^{at}$$ is $$y=c_1y_1+y_2$$, where $$y_1$$ is a basis for $$\ker(D-b)$$ (guaranteed to be size one by \eqref{kerda}) by the preimage theorem. Note: In the more general proof, we would use the inductive hypothesis to get a size $$n$$ basis for the kernel. 
+
+But, if $$y_2$$ is a preimage of $$e^{at}$$ under $$(D-b)$$, then $$c_2y_2$$ is a preimage of $$c_2e^{at}$$ under $$(D-b)$$. Hence, the general solution to $$(D-b)y=c_2e^{at}$$ is
+
+$$y=c_1y_1+c_2y_2$$
+
+We claim that $$y$$ is a solution to $$p(D)y=0$$. If we take the image of $$y$$ under $$(D-b)$$, we get $$c_2e^{at}$$ as we already defined $$y_1$$ to be in the kernel and $$y_2$$ to be a preimage of $$e^{at}$$. But if we then take the image under $$(D-a)$$, we will get zero by \eqref{kerda}. Hence, $$y$$ is in the kernel of $$(D-a)\circ (D-b)=(D-a)(D-b)=p(D)$$.
+
+Now, $$y_2$$ cannot be linearly dependent (a scalar multiple of) $$y_1$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{at}\neq0$$ under $$(D-b)$$. Hence, $$y_1,y_2$$ form a set of two linearly independent vectors in $$\ker(p(D))$$, making its dimension at least two. We now need to show that there cannot be another linearly independent solution.
+
+Suppose that $$y_3$$ is also a solution to $$p(D)y=0$$ which is linearly independent with $$\{y_1,y_2\}$$. $$y_3$$ can't be in the kernel of $$(D-b)$$, because then it would be linearly dependent with $$y_1$$. So $$(D-b)y_3\neq0\implies (D-b)y_3\in\ker(D-a)$$. That is, $$(D-b)y_3=c_3e^{at}$$. But, like before, we know that $$c_3y_2$$ will be a preimage of $$c_3e^{at}$$ under $$(D-b)$$, so by the preimage theorem $$y_3=c_3y_2+y_h$$ where $$y_h\in\ker(D-b)$$. But, that means $$y_h=c_4y_1$$, implying $$y_3=c_3y_2+c_4y_1$$, contradicting that $$y_3$$ is linearly independent from $$y_1$$ and $$y_2$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly two!
+
+This answers our third question, **"Why does a second order equation have exactly two linearly independent homogeneous solutions?"**
+
+Because a second order equation is the composition of two degree one operators which each add a dimension to the kernel.
+
+As I mentioned before, this logic does generalize almost exactly to the $$n$$th order case! I encourage you to fill in the details.
 
 ## Complex Stuff
 
@@ -381,12 +384,18 @@ so we're still left with $$2k$$ solutions in the end.
 
 ## Final Thoughts
 
-I love this perspective. The ideas of "exponentials would be an expected guess", "to get the other solutions, multiply one solution by an arbitrary function $$v(t)$$", or "just reduce the $$n$$th order equation down to a system of first order equations" seemed intuitive, but only in retrospect. As someone who questions a lot, and wants to know *why* something is true, the answers felt very contrived.
+I love this perspective. The ideas of "exponentials would be an expected guess", "to get the other solutions, multiply one solution by an arbitrary function $$v(t)$$", or "just reduce the $$n$$th order equation down to a system of first order equations" would be mildly intuitive, but only in retrospect. As someone who questions a lot, and wants to know *why* something is true, the answers felt very contrived.
 
-But once we change from a differential equation to a linear operator, suddenly everything is a lot simpler (at least to me). The progression from first order to $$n$$th order is smooth and things just work out exactly the way you would expect them to. 
+But once we change from a differential equation to a linear operator, suddenly everything is a lot simpler (at least to me). The progression from first order to $$n$$th order is smooth and things just work out exactly the way you would expect them to.
 
-But this is coming from someone who thinks a lot about these subjects, so perhaps it isn't much easier for you. Especially if you don't know any linear algebra (and if you got here without knowing linear algebra, uh... why? thank you, but why?) I hope this is helpful, though.
+- Exponentials are an expected guess because they are eigenvectors of the differential operator.
+- To get the other solutions, we do an exponential shift, which effectively has us multiply by our first given solution.
+- The dimension is $$n$$ because each linear differential factor increases the dimension of the kernel by one.
 
-This is a heavily condensed version of a chapter from a Linear Algebra + Differential Equations textbook I'm working on. I hope you liked it, and maybe you'll want to check out the textbook when it's done (ETA: probably never). Alright, thanks for reading.
+Granted, these justifications *only* work for constant coefficients. And, in general, reduction of order and reduction to a system of first order equations is necessary to generalize these ideas. But I greatly relish in the idea that we can make a much more elementary argument for this most special of cases that doesn't end up relying on Picard–Lindelöf.
+
+But this is coming from someone who thinks a lot about these subjects, so perhaps it isn't much easier for you. Especially if you don't know any linear algebra (and if you got here without knowing linear algebra, uh... why? thank you for reading, but why?) I hope this was helpful, though.
+
+Also, this is a heavily condensed version of a chapter from a Linear Algebra + Differential Equations textbook I'm working on in my spare time (for which I have almost none now that I am in a PhD program). I hope you liked it, and maybe you'll want to check out the textbook when it's done (ETA: probably never). Alright, thanks for reading.
 
 [hyperlink](https://youtu.be/Tptx8boeGhE?si=1G60x2ZMJgUPC8Gr){:target="_blank"}
