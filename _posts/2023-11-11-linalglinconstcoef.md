@@ -7,7 +7,7 @@ comments: true
 importance: 1
 tags: best
 category: differential-equations
-authors:  
+authors:
   - name: Taylor Grant
     url: ""
     affiliations:
@@ -189,7 +189,9 @@ We can prove that \eqref{kerda} actually generalizes to $$n$$th order equations 
 
 Suppose $$p(x)$$ is a second degree polynomial. Then $$p(x)=(x-a)q(x)$$ where $$q(x)$$ is a degree one polynomial (this is guaranteed by the fundamental theorem of algebra, meaning $$a$$ can be complex). Hence,
 
-$$p(D)y=0\implies (D-a)q(D)y=0\implies q(D)y\in\ker(D-a)$$
+$$p(D)y=0\implies (D-a)q(D)y=0$$
+
+$$\implies q(D)y\in\ker(D-a)$$
 
 \eqref{kerda} then tells us that $$q(D)y=c_2e^{at}$$. We know we can find a particular solution to $$q(D)y=e^{at}$$ (which we will call $$y_2$$) by using an [integrating factor](../integratingfactor/){:target="_blank"}, since it's first order$$^{[1]}$$.
 
