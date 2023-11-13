@@ -124,7 +124,7 @@ We are going to focus in on the differential operator $$D$$ defined by
 Dy=y'
 \end{equation}
 
-This is a linear operator as mentioned before. As a note, we will omit the $$I$$ when writing something like $$(D-\lambda I)$$. We will just write $$(D-\lambda)$$.
+This is a linear operator as mentioned before. As a note, we will omit the $$I$$ when writing something like $$(D-\lambda I)$$. We will just write $$(D-\lambda)$$. Further, $$y^{(k)}=D^ky$$.
 
 Okay, so now, let's bring everything we talked about above together:
 
