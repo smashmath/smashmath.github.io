@@ -3,7 +3,7 @@ layout: distill
 title: Constant Coefficient ODEs Made Simple with Linear Operators
 date: 2023-11-11
 description: No more "guessing". This way is intuitive.
-giscus_comments: true
+comments: true
 importance: 1
 featured: true
 tags: best
@@ -307,35 +307,41 @@ y_p=\frac{Bt^me^{at}}{p^{(m)}(a)}
 
 and there we go. If $$p^{(k)}(a)=0$$ for $$0\leq k<m$$ and $$p^{(m)}(a)\neq0$$, then \eqref{gerf} is a particular solution to $$p(D)y=Be^{at}$$.
 
-# Second Order. Two Independent Solutions
+# nth Order. n Independent Solutions
 
-We can prove that \eqref{kerda}'s implication that a first order equation has kernel of dimension exactly one actually generalizes to $$n$$th order equations by induction. Instead of doing the full induction proof, I will do the extension from first order to second order (the full proof has an essentially identical process).
+We can prove that \eqref{kerda}'s implication that a first order equation has kernel of dimension exactly one actually generalizes to $$n$$th order equations by induction. \eqref{kerda} is our base case, so let us assume that an $$n$$th order equation has a kernel of exactly degree $$n$$. That is, if $$q(x)$$ is degree $$n$$, then $$\ker(q(D))$$ has a basis $$y_1,\ldots,y_n$$.
 
-Suppose $$p(x)$$ is a second degree polynomial. Without loss of generality, we assume $$p$$ is monic. Then $$p(x)=(x-a)(x-b)$$ (this is guaranteed by the fundamental theorem of algebra, meaning $$a$$ and $$b$$ can be complex). Hence,
+Suppose $$p(x)$$ is an $$n+1$$th degree polynomial. Then $$p(x)=(x-a)q(x)$$ for some $$q(x)$$ that is degree $$n$$ (this is guaranteed by the fundamental theorem of algebra, meaning $$a$$ might be complex). Hence,
 
-$$p(D)y=0\implies (D-a)(D-b)y=0$$
+$$p(D)y=0\implies (D-a)q(D)y=0$$
 
-$$\implies (D-b)y\in\ker(D-a)$$
+$$\implies q(D)y\in\ker(D-a)$$
 
-\eqref{kerda} then tells us that $$(D-b)y=c_2e^{at}$$. Let us first consider $$(D-b)y=e^{at}$$ (as we can multiply the particular solution by $$c_2$$ to get a solution to the preceeding equation). We know we can get some particular solution $$y_2$$ to $$(D-b)y=e^{at}$$ using the ERF.
+\eqref{kerda} then tells us that $$q(D)y=Ce^{at}$$ for some $$C$$. Let us first consider $$q(D)y=e^{at}$$ (as we can multiply the particular solution by $$C$$ to get a solution to the preceeding equation). We know we can get some particular solution $$y_p$$ to $$q(D)y=e^{at}$$ using the ERF.
 
-That is, $$y_2$$ is a preimage of $$e^{at}$$ under $$(D-b)$$, so the general solution to $$(D-b)y=e^{at}$$ is $$y=c_1y_1+y_2$$, where $$y_1$$ is a basis for $$\ker(D-b)$$ (guaranteed to be size one by \eqref{kerda}) by the preimage theorem. Note: In the more general proof, we would use the inductive hypothesis to get a size $$n$$ basis for the kernel. 
+That is, $$y_p$$ is a preimage of $$e^{at}$$ under $$q(D)$$, so the general solution to $$q(D)y=e^{at}$$ is $$y=c_1y_1+\ldots+c_ny_n+y_p$$, where $$y_1,\ldots,y_n$$ is a basis for $$\ker(q(D))$$ (guaranteed to be size $$n$$ by the inductive hypothesis) by the preimage theorem.
 
-But, if $$y_2$$ is a preimage of $$e^{at}$$ under $$(D-b)$$, then $$c_2y_2$$ is a preimage of $$c_2e^{at}$$ under $$(D-b)$$. Hence, the general solution to $$(D-b)y=c_2e^{at}$$ is
+But, if $$y_p$$ is a preimage of $$e^{at}$$ under $$q(D)$$, then $$Cy_p$$ is a preimage of $$Ce^{at}$$ under $$q(D)$$. Hence, the general solution to $$q(D)y=Ce^{at}$$ is
 
-$$y=c_1y_1+c_2y_2$$
+$$y=c_1y_1+\ldots+c_ny_n+Cy_p$$
 
-We claim that $$y$$ is a solution to $$p(D)y=0$$. If we take the image of $$y$$ under $$(D-b)$$, we get $$c_2e^{at}$$ as we already defined $$y_1$$ to be in the kernel and $$y_2$$ to be a preimage of $$e^{at}$$. But if we then take the image under $$(D-a)$$, we will get zero by \eqref{kerda}. Hence, $$y$$ is in the kernel of $$(D-a)\circ (D-b)=(D-a)(D-b)=p(D)$$.
+We claim that $$y$$ is a solution to $$p(D)y=0$$. If we take the image of $$y$$ under $$q(D)$$, we get $$Ce^{at}$$ as we already defined $$y_1,\ldots,y_n$$ to be a basis for its kernel and $$y_p$$ to be a preimage of $$e^{at}$$. That is,
 
-Now, $$y_2$$ cannot be linearly dependent (a scalar multiple of) $$y_1$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{at}\neq0$$ under $$(D-b)$$. Hence, $$y_1,y_2$$ form a set of two linearly independent vectors in $$\ker(p(D))$$, making its dimension at least two. We now need to show that there cannot be another linearly independent solution.
+$$q(D)\left(c_1y_1+\ldots+c_ny_n+Cy_p\right)=Ce^{at}$$
 
-Suppose that $$y_3$$ is also a solution to $$p(D)y=0$$ which is linearly independent with $$\{y_1,y_2\}$$. $$y_3$$ can't be in the kernel of $$(D-b)$$, because then it would be linearly dependent with $$y_1$$. So $$(D-b)y_3\neq0\implies (D-b)y_3\in\ker(D-a)$$. That is, $$(D-b)y_3=c_3e^{at}$$. But, like before, we know that $$c_3y_2$$ will be a preimage of $$c_3e^{at}$$ under $$(D-b)$$, so by the preimage theorem $$y_3=c_3y_2+y_h$$ where $$y_h\in\ker(D-b)$$. But, that means $$y_h=c_4y_1$$, implying $$y_3=c_3y_2+c_4y_1$$, contradicting that $$y_3$$ is linearly independent from $$y_1$$ and $$y_2$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly two!
+But if we then take the image of the result under $$(D-a)$$, we will get zero by \eqref{kerda}. Hence, $$y$$ is in the kernel of $$(D-a)\circ q(D)=(D-a)q(D)=p(D)$$.
 
-This answers our third question, **"Why does a second order equation have exactly two linearly independent homogeneous solutions?"**
+Now, $$y_p$$ cannot be linearly dependent $$y_1,\ldots,y_n$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{at}\neq0$$ under $$q(D)$$. Hence, $$\left\{y_1,\ldots,y_n,y_p\right\}$$ form a set of $$n+1$$ linearly independent vectors in $$\ker(p(D))$$, making its dimension at least $$n+1$$. We now need to show that there cannot be another linearly independent solution.
 
-Because a second order equation is the composition of two degree one operators which each add a dimension to the kernel.
+Suppose that $$y_{n+2}$$ is also a solution to $$p(D)y=0$$ which is linearly independent with $$\{y_1,\ldots,y_n,y_p\}$$. $$y_{n+2}$$ can't be in the kernel of $$q(D)$$, because then it would be linearly dependent with $$y_1,\ldots,y_n$$. So 
 
-As I mentioned before, this logic does generalize almost exactly to the $$n$$th order case! I encourage you to fill in the details.
+$$q(D)y_{n+2}\neq0\implies q(D)y_{n+2}\in\ker(D-a)$$
+
+That is, $$q(D)y_{n+2}=c_{n+2}e^{at}$$. But, like before, we know that $$c_{n+2}y_p$$ will be a preimage of $$c_{n+2}e^{at}$$ under $$q(D)$$, so by the preimage theorem $$y_{n+2}=c_{n+2}y_p+y_h$$ where $$y_h\in\ker(q(D))$$. But, that means $$y_h=d_1y_1+\ldots+d_ny_n$$, implying $$y_{n+2}=c_{n+2}y_p+d_1y_1+\ldots+d_ny_n$$, contradicting that $$y_{n+2}$$ is linearly independent from $$\{y_1,\ldots,y_n,y_p\}$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly $$n+1$$!
+
+This answers our third question, **"Why does an $$n$$th order equation have exactly $$n$$ linearly independent homogeneous solutions?"**
+
+Because a homogeneous $$n$$th order equation is equivalent to a nonhomogeneous $$(n-1)$$th order equation, for which the particular solution is necessarily linearly independent from the homogeneous solution in the dimension $$n-1$$ kernel. And the particular solution for the reduced equation will then be a homogeneous solution for the $$n$$th order equation. And by the preimage theorem, any other solution will be linearly dependent on the general solution.
 
 ## Complex Stuff
 
