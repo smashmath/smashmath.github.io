@@ -110,7 +110,7 @@ $$\implies p(T)x=a_0x+a_1T(x)+\ldots+a_nT^n(x)$$
 
 Here are some insanely important facts
 
-4. Polynomials in an operator commute. That is, for all polynomials $$p,q$$, $$p(T)q(T)=q(T)p(T)$$. This includes the specific case of first order factors $$(D-a)(D-b)=(D-b)(D-a)$$.
+4. Polynomials in an operator commute. That is, for all polynomials $$p,q$$, $$p(T)q(T)=q(T)p(T)$$. This includes the specific case of first order factors $$(T-aI)(T-bI)=(T-bI)(T-aI)$$.
 3. The kernel is just a subset of the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
 1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof).
 4. Combining the above two points, finding all eigenvector of $$T$$ with eigenvalue $$\lambda$$ such that $$p(\lambda)=0$$ will give a subset of the kernel of $$p(T)$$.
@@ -124,7 +124,7 @@ We are going to focus in on the differential operator $$D$$ defined by
 Dy=y'
 \end{equation}
 
-This is a linear operator as mentioned before.
+This is a linear operator as mentioned before. As a note, we will omit the $$I$$ when writing something like $$(D-\lambda I)$$. We will just write $$(D-\lambda)$$.
 
 Okay, so now, let's bring everything we talked about above together:
 
