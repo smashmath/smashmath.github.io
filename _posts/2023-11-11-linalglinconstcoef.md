@@ -148,7 +148,7 @@ $$p(\lambda)=a_n\lambda^n+\ldots+a_1\lambda+a_0=0$$
 
 And there we go: the characteristic polynomial is now something obvious to try, and we have yet to even *mention* exponentials.
 
-Let $$\lambda$$ be any solution to $$p(\lambda)=0$$. Now we are looking for eigenvectors $$y$$ such that $$Dy=\lambda y$$.
+Let $$\lambda$$ be any solution to $$p(\lambda)=0$$. Now we are looking for eigenvectors $$y$$ of $$D$$ with eigenvalue $$\lambda$$. That is, we want $$Dy=\lambda y\implies y'=\lambda y$$.
 
 # The Most Important ODE
 
