@@ -110,11 +110,11 @@ $$\implies p(T)x=a_0x+a_1T(x)+\ldots+a_nT^n(x)$$
 
 Here are some insanely important facts
 
-4. Polynomials in an operator commute. That is, for all polynomials $$p,q$$, $$p(T)q(T)=q(T)p(T)$$. This includes the specific case of first order factors $$(T-aI)(T-bI)=(T-bI)(T-aI)$$.
-3. The kernel is just the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
-1. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof).
-4. Combining the above two points, finding all eigenvector of $$T$$ with eigenvalue $$\lambda$$ such that $$p(\lambda)=0$$ will give a subset of the kernel of $$p(T)$$.
-2. $$p(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$. So finding all eigenvector of $$T$$ with eigenvalue $$\lambda$$ such that $$p(\lambda)=0$$ will not necessarily give a full basis for $$\ker(p(T))$$.
+1. Polynomials in an operator commute. That is, for all polynomials $$p,q$$, $$p(T)q(T)=q(T)p(T)$$. This includes the specific case of first order factors $$(T-aI)(T-bI)=(T-bI)(T-aI)$$.
+2. The kernel is just the eigenspace of $$0$$. That is, finding the kernel of an operator can be done by finding all eigenvectors with eigenvalue zero.
+3. If $$v$$ is an eigenvector of $$T$$ with eigenvalue $$\lambda$$, then $$v$$ is also an eigenvector of $$p(T)$$ with eigenvalue $$p(\lambda)$$ (this is a very good thing to prove, and it's a very short proof).
+4. $$p(T)$$ can have eigenvectors that are not eigenvectors of $$T$$. One example is that $$\begin{pmatrix}1\\0\end{pmatrix}$$ is an eigenvector of $$J=\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$$, but $$\begin{pmatrix}0\\1\end{pmatrix}$$ is an eigenvector of $$(J-\lambda I)^2=\begin{pmatrix}0&0\\0&0\end{pmatrix}$$ and not of $$J$$.
+5. Combining the above three points tells us that finding all eigenvectors of $$T$$ with eigenvalue $$\lambda$$ such that $$p(\lambda)=0$$ will definitely give a subset of the kernel of $$p(T)$$. However, it may not necessarily give a full basis for $$\ker(p(T))$$.
 
 # The Differential Operator
 
