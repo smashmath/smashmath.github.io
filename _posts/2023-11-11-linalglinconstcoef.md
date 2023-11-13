@@ -142,7 +142,11 @@ As before, to find the **general solution**, we need a basis $$\{y_1,\ldots,y_k\
 
 $$y=y_p+c_1y_1+\ldots+c_ky_k$$
 
-So how can we start to find a basis for the kernel? And how many vectors will be in it? Well, we know that any eigenvector of $$D$$ with eigenvalue $$\lambda$$ will be an eigenvector of $$p(D)$$ with eigenvalue $$p(\lambda)$$. So we can try to find some solutions by solving $$p(\lambda)=0$$. And there we go: the characteristic polynomial is now something obvious to try, and we have yet to even *mention* exponentials.
+So how can we start to find a basis for the kernel? And how many vectors will be in it? Well, we know that any eigenvector of $$D$$ with eigenvalue $$\lambda$$ will be an eigenvector of $$p(D)$$ with eigenvalue $$p(\lambda)$$. So we can try to find some solutions by solving $$p(\lambda)=0$$. 
+
+$$p(\lambda)=a_n\lambda^n+\ldots+a_1\lambda+a_0=0$$
+
+And there we go: the characteristic polynomial is now something obvious to try, and we have yet to even *mention* exponentials.
 
 Let $$\lambda$$ be any solution to $$p(\lambda)=0$$. Now we are looking for eigenvectors $$y$$ such that $$Dy=\lambda y$$.
 
