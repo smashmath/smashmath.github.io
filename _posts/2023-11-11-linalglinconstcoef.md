@@ -134,6 +134,10 @@ The differential equation
 a_ny^{(n)}+\ldots+a_1y'+a_0y=g(t)
 \end{equation}
 
+$$a_nD^ny+\ldots+a_1Dy+a_0y=g(t)$$
+
+$$\left(a_nD^n+\ldots+a_1D+a_0\right)y=g(t)$$
+
 is just the equation $$p(D)y=g(t)$$, where $$p(x)=a_nx^n+\ldots+a_1x+a_0$$. That is, we are looking for preimages of $$g(t)$$ under $$p(D)$$, and every solution will be of the form $$y=y_p+y_h$$ where $$y_p$$ is some preimage of $$g(t)$$, and $$y_h$$ is any vector in the kernel of $$p(D)$$. Note that because the kernel is always a subspace, this gives us the superposition property of homogeneous solutions for free.
 
 i.e. If $$y_1,\ldots,y_n$$ are solutions to $$p(D)y=0$$, then so will $$c_1y_1+\ldots+c_ny_n$$.
