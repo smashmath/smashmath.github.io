@@ -359,7 +359,7 @@ Suppose that $$y_{n+2}$$ is also a solution to $$p(D)y=0$$ which is linearly ind
 
 $$q(D)y_{n+2}\neq0\implies q(D)y_{n+2}\in\ker(D-\lambda)$$
 
-That is, $$q(D)y_{n+2}=c_{n+2}e^{\lambda t}$$. But, like before, we know that $$c_{n+2}y_p$$ will be a preimage of $$c_{n+2}e^{\lambda t}$$ under $$q(D)$$, so by the preimage theorem $$y_{n+2}=c_{n+2}y_p+y_h$$ where $$y_h\in\ker(q(D))$$. But, that means $$y_h=d_1y_1+\ldots+d_ny_n$$, implying $$y_{n+2}=c_{n+2}y_p+d_1y_1+\ldots+d_ny_n$$, contradicting that $$y_{n+2}$$ is linearly independent from $$\{y_1,\ldots,y_n,y_p\}$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly $$n+1$$!
+That is, $$q(D)y_{n+2}=c_{n+2}e^{\lambda t}$$. But, like before, we know that $$c_{n+2}y_p$$ will be a preimage of $$c_{n+2}e^{\lambda t}$$ under $$q(D)$$, so by the preimage theorem $$y_{n+2}=c_{n+2}y_p+y_h$$ where $$y_h\in\ker(q(D))$$. But, since $$y_h=d_1y_1+\ldots+d_ny_n$$ for some constants $$d_i$$, that means $$y_{n+2}=c_{n+2}y_p+d_1y_1+\ldots+d_ny_n$$, contradicting that $$y_{n+2}$$ is linearly independent from $$\{y_1,\ldots,y_n,y_p\}$$. Therefore, the dimension of $$\ker(p(D))$$ is exactly $$n+1$$!
 
 This answers our third question, **"Why does an $$n$$th order equation have exactly $$n$$ linearly independent homogeneous solutions?"**
 
