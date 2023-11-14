@@ -238,6 +238,12 @@ If you've taken enough derivatives, you may have caught on to this little shortc
 De^{\lambda t}=e^{\lambda t}(D+\lambda),\quad e^{\lambda t}D=(D-\lambda)e^{\lambda t}
 \end{equation}
 
+We can also then say that
+
+\begin{equation}
+e^{-\lambda t}(D-\lambda)=De^{-\lambda t}
+\end{equation}
+
 I encourage you to prove that linearity actually guarantees that
 
 $$
