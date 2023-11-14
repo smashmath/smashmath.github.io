@@ -353,7 +353,7 @@ $$q(D)\left(c_1y_1+\ldots+c_ny_n+Cy_p\right)=Ce^{\lambda t}$$
 
 But if we then take the image of the result under $$(D-\lambda)$$, we will get zero by \eqref{kerda}. Hence, $$y$$ is in the kernel of $$(D-\lambda)\circ q(D)=(D-\lambda)q(D)=p(D)$$.
 
-Now, $$y_p$$ cannot be linearly dependent $$y_1,\ldots,y_n$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{\lambda t}\neq0$$ under $$q(D)$$. Hence, $$\left\{y_1,\ldots,y_n,y_p\right\}$$ form a set of $$n+1$$ linearly independent vectors in $$\ker(p(D))$$, making its dimension at least $$n+1$$. We now need to show that there cannot be another linearly independent solution.
+Now, $$y_p$$ cannot be linearly dependent with $$y_1,\ldots,y_n$$, because then it would be in the kernel of $$q(D)$$ and thus could not be a preimage of $$e^{\lambda t}\neq0$$ under $$q(D)$$. Hence, $$\left\{y_1,\ldots,y_n,y_p\right\}$$ form a set of $$n+1$$ linearly independent vectors in $$\ker(p(D))$$, making its dimension at least $$n+1$$. We now need to show that there cannot be another linearly independent solution.
 
 Suppose that $$y_{n+2}$$ is also a solution to $$p(D)y=0$$ which is linearly independent with $$\{y_1,\ldots,y_n,y_p\}$$. $$y_{n+2}$$ can't be in the kernel of $$q(D)$$, because then it would be linearly dependent with $$y_1,\ldots,y_n$$. So 
 
