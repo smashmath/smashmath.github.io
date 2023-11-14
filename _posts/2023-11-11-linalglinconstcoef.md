@@ -317,7 +317,7 @@ Then for $$p(D)y=q(D)(D-\lambda)^my=Be^{\lambda t}$$, we can use our good ol' ex
 
 $$q(D+\lambda)D^m(e^{-\lambda t}y)=B$$
 
-Letting $$u=D^m(e^{\lambda t}y)$$, we get $$q(D+\lambda)u=B$$, where we know that plugging in $$x=0$$ into $$q(x+\lambda)$$ will give us something nonzero. Hence, we can use our ERF to say a particular solution is $$u_p=\frac{B}{q(0+\lambda)}=\frac{Bm!}{p^{(m)}(\lambda)}$$. That is,
+Letting $$u=D^m(e^{-\lambda t}y)$$, we get $$q(D+\lambda)u=B$$, where we know that plugging in $$x=0$$ into $$q(x+\lambda)$$ will give us something nonzero. Hence, we can use our ERF to say a particular solution is $$u_p=\frac{B}{q(0+\lambda)}=\frac{Bm!}{p^{(m)}(\lambda)}$$. That is,
 
 $$D^m(e^{-\lambda t}y_p)=u_p=\frac{Bm!}{p^{(m)}(\lambda)}$$
 
