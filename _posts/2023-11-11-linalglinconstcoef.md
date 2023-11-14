@@ -238,12 +238,6 @@ If you've taken enough derivatives, you may have caught on to this little shortc
 De^{\lambda t}=e^{\lambda t}(D+\lambda),\quad e^{\lambda t}D=(D-\lambda)e^{\lambda t}
 \end{equation}
 
-We can also then say that
-
-\begin{equation}
-e^{-\lambda t}(D-\lambda)=De^{-\lambda t}
-\end{equation}
-
 I encourage you to prove that linearity actually guarantees that
 
 $$
@@ -263,9 +257,17 @@ $$e^{-\lambda t}(D-\lambda)y=(D-(-\lambda)-\lambda)e^{-\lambda t}y$$
 
 $$=D(e^{-\lambda t}y)=0$$
 
-And if $$e^{-\lambda t}y$$ is in the kernel of $$D$$, then it's just a constant. So $$e^{-\lambda t}y=C\implies y=Ce^{\lambda t}$$. If you look at what we did closely, you'll notice we basically just did an [integrating factor](../integratingfactor/){:target="_blank"} without doing an integrating factor.
+And if $$e^{-\lambda t}y$$ is in the kernel of $$D$$, then it's just a constant. So $$e^{-\lambda t}y=C\implies y=Ce^{\lambda t}$$. 
 
-This is the takeaway: **we can leverage the exponential shift to look at the kernel of just $$D$$, which is equivalent to integration**.
+To summarize,
+
+\begin{equation}
+e^{-\lambda t}(D-\lambda)=De^{-\lambda t}
+\end{equation}
+
+If you look at what we did closely, you'll notice this is basically just an [integrating factor](../integratingfactor/){:target="_blank"}.
+
+The takeaway from this is: **we can leverage the exponential shift to look at the kernel of just $$D$$, which is equivalent to integration**.
 
 ## Exponential Shift Into Overdrive
 
