@@ -309,7 +309,7 @@ so $$\frac{Be^{\lambda t}}{p(\lambda)}$$ is a particular solution. Okay, that's 
 
 No, but really, it is that simple. We get $$\frac{Be^{\lambda t}}{p(\lambda)}$$ as a preimage of $$Be^{\lambda t}$$ because it's an eigenvector, and we can just divide by the eigenvalue when it's nonzero.
 
-We can use some of our techniques here to get the generalized exponential response formula as well. However, it requires a result I don't feel like proving:
+We can use some of our techniques here to get the generalized exponential response formula (GERF) as well. However, it requires a result I don't feel like proving:
 
 **$$p^{(k)}(\lambda)=0$$ for $$0\leq k<m$$ and $$p^{(m)}(\lambda)\neq0$$ if and only if $$\lambda$$ is a root of $$p(x)$$ with multiplicity exactly $$m$$. And $$p(x)=q(x)(x-\lambda)^m$$ where $$q(\lambda)=\frac{p^{(m)}(\lambda)}{m!}\neq0$$**
 
@@ -339,7 +339,7 @@ $$p(D)y=0\implies (D-\lambda)q(D)y=0$$
 
 $$\implies q(D)y\in\ker(D-\lambda)$$
 
-\eqref{kerda} then tells us that $$q(D)y=Ce^{\lambda t}$$ for some $$C$$. Let us first consider $$q(D)y=e^{\lambda t}$$ (as we can multiply the particular solution by $$C$$ to get a solution to the preceding equation). We know we can get some particular solution $$y_p$$ to $$q(D)y=e^{\lambda t}$$ using the ERF.
+\eqref{kerda} then tells us that $$q(D)y=Ce^{\lambda t}$$ for some $$C$$. Let us first consider $$q(D)y=e^{\lambda t}$$ (as we can multiply the particular solution by $$C$$ to get a solution to the preceding equation). We know we can get some particular solution $$y_p$$ to $$q(D)y=e^{\lambda t}$$ using the GERF.
 
 That is, $$y_p$$ is a preimage of $$e^{\lambda t}$$ under $$q(D)$$, so the general solution to $$q(D)y=e^{\lambda t}$$ is $$y=c_1y_1+\ldots+c_ny_n+y_p$$, where $$y_1,\ldots,y_n$$ is a basis for $$\ker(q(D))$$ (guaranteed to be size $$n$$ by the inductive hypothesis) by the preimage theorem.
 
