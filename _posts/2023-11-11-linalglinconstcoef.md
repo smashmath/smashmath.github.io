@@ -365,6 +365,8 @@ This answers our third question, **"Why does an $$n$$th order equation have exac
 
 Because a homogeneous $$n$$th order equation is equivalent to a nonhomogeneous $$(n-1)$$th order equation, for which the particular solution is necessarily linearly independent from the homogeneous solution in the dimension $$n-1$$ kernel. And the particular solution for the reduced equation will then be a homogeneous solution for the $$n$$th order equation. And by the preimage theorem, any other solution will be linearly dependent on the general solution.
 
+As an unfortunate remark: this argument does not work for every type of differential equation. You do generally need more heavy duty techniques like reduction to a first order system of differential equations to prove this when the coefficients are not constant. Still, I like this very concrete proof for this very special case.
+
 ## Complex Stuff
 
 You may have noticed that I didn't really specify what all the constants where in any of what I did. That's because this general theory works for *all* polynomials, even complex ones. It's only the very specific real polynomial case where you *can* always convert complex roots to sines and cosines. In most textbooks, they present this stuff in operator notation, but I'll just speedrun through it for completion's sake.
