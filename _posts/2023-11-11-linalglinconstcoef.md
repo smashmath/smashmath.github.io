@@ -81,7 +81,7 @@ For the derivative operator, the kernel is just the set of all constant function
 
 ## Eigenvectors
 
-An **eigenvector** of $$T$$ is a nonzero vector $$v$$ for which $$T$$ just scales $$v$$. That is, $$T(v)=\lambda v$$ for some $$\lambda\in F$$. $$\lambda$$ is called the **eigenvalue** of $$v$$. Note that this means that
+An **eigenvector** of $$T$$ is a nonzero vector $$v$$ for which $$T$$ just scales $$v$$. That is, $$T(v)=\lambda v$$ for some $$\lambda\in F$$ (note we are using $$F$$ here because this works for any field. Eventually we are going to be assuming $$F$$ is $$\mathbb{R}$$ or $$\mathbb{C}$$). $$\lambda$$ is called the **eigenvalue** of $$v$$. Note that this means that
 
 $$(T-\lambda I)v=0\implies v\in\ker(T-\lambda I)$$
 
@@ -134,6 +134,8 @@ The differential equation
 \begin{equation}
 a_ny^{(n)}+\ldots+a_1y'+a_0y=g(t)
 \end{equation}
+
+where the $$a_i$$'s can be complex numbers.
 
 $$a_nD^ny+\ldots+a_1Dy+a_0y=g(t)$$
 
