@@ -27,6 +27,8 @@ toc:
       - name: Example 3
 ---
 
+**Updated 11/14/23**
+
 # Basic Overview: The Alpha Method
 
 The results of the Alpha Method are so simple, I feel it's necessary I give them outright before the derivation.
@@ -66,6 +68,12 @@ where $$z_p$$ is obtained by using the alpha method on
 $$\begin{equation}
     p(D)z=e^{(\alpha+i\beta)t}
 \end{equation}$$
+
+Or, alternatively, if $$p^{(m)}(\alpha )=re^{i\theta}$$, then the particular solution will be
+
+\begin{equation}
+        y_p=\frac{t^me^{\alpha t}}{r}\left(B\cos(\beta t-\theta)+C\sin(\beta t-\theta)\right)
+\end{equation}
 
 For a more formal and thorough examination of this problem and method, take a look at [this](https://www.overleaf.com/read/xtxskmmnjphy){:target="_blank"}.
 
@@ -357,8 +365,22 @@ $$\begin{equation}
 
 Now the solution to \eqref{complex case} will be
 
-$$\begin{equation}
+$$\begin{equation*}
     y_p=B\operatorname{Re}(z_p)+C\operatorname{Im}(z_p)
+\end{equation*}$$
+
+But we can actually simplify this further. If we suppose that $$p(\alpha +\beta  i)=re^{i\theta}$$, then we get
+
+$$z_p=\frac{t^me^{(\alpha +i\beta ) t}}{re^{i\theta}}=\frac{t^me^{\alpha t}}{r}e^{i(\beta t-\theta)}$$
+
+So the real and imaginary parts are much more explicit:
+
+$$z_p=\frac{t^me^{\alpha t}}{r}\left(\cos(\beta t-\theta)+i\sin(\beta t-\theta)\right)$$
+
+giving us
+
+$$\begin{equation}
+    y_p=\frac{t^me^{\alpha t}}{r}\left(B\cos(\beta t-\theta)+C\sin(\beta t-\theta)\right)
 \end{equation}$$
 
 And... that's it. Now we can solve \eqref{complex example}.
@@ -385,7 +407,15 @@ $$\begin{equation*}
     z_p=\frac{te^{(-1+i)t}}{4+2i}
 \end{equation*}$$
 
-This is not particularly helpful, however, since we have a complex number in the denominator. To remedy this, we multiply the numerator and denominator by the conjugate.
+Now we can write $$4+2i$$ in its polar form: $$4+2i=\sqrt{4^2+2^2}e^{i\tan^{-1}\left(\frac{2}{4}\right)}=2\sqrt{5}e^{i\tan^{-1}\left(0.5\right)}$$ and get
+
+$$\begin{equation*}
+    z_p=\frac{te^{-t}}{2\sqrt 5}\left(6\cos\left(t-\theta\right)+2\sin\left(t-\theta\right)\right)
+\end{equation*}$$
+
+where $$\theta=\tan^{-1}\left(0.5\right)$$. However, while easy to write, and great for a computer plotter, this answer is hard to verify by hand! You could use the angle sum formula to combine it, or expand it further. But the alternative way to get a more explicit answer is the following:
+
+We multiply the numerator and denominator by the conjugate.
 
 $$\begin{equation*}
     z_p=\frac{te^{(-1+i)t}}{4+2i}=
