@@ -27,6 +27,7 @@ toc:
       - name: Exponential Shift Into Overdrive
   - name: Exponential Response Formula
   - name: nth Order. n Independent Solutions
+  - name: A remark on undetermined coefficients
   - name: Complex Stuff
 ---
 
@@ -366,6 +367,18 @@ This answers our third question, **"Why does an $$n$$th order equation have exac
 Because a homogeneous $$n$$th order equation is equivalent to a nonhomogeneous $$(n-1)$$th order equation, for which the particular solution is necessarily linearly independent from the homogeneous solution in the dimension $$n-1$$ kernel. And the particular solution for the reduced equation will then be a homogeneous solution for the $$n$$th order equation. And by the preimage theorem, any other solution will be linearly dependent on the general solution.
 
 As an unfortunate remark: this argument does not work for every type of differential equation. You do generally need more heavy duty techniques like reduction to a first order system of differential equations to prove this when the coefficients are not constant. Still, I like this very concrete proof for this very special case.
+
+## A remark on undetermined coefficients
+
+You can also utilize the exponential shift to more easily solve for more difficult particular solutions. If you have something like
+
+$$p(D)y=q(t)e^{\alpha t}$$
+
+where $$q(t)$$ is some polynomial, then you can multiply by $$e^{-\alpha t}$$ to make the RHS a simple polynomial. This will shift the equation to
+
+$$p(D+\alpha)e^{-\alpha t}y=q(t)$$
+
+In general, it's slightly easier to solve this equation since your "guess" for a particular solution is just also a polynomial, removing the need to do product rules. Also, you can use [synthetic division](../synthetictaylor/){:target="_blank"} to more easily calculate the coefficients of $$p(D+\alpha)$$ without having to expand out the expressions and collect like terms. This is arguably a waste of time, and doesn't cut down the computation time *too* much overall. I like to do it though.
 
 ## Complex Stuff
 
