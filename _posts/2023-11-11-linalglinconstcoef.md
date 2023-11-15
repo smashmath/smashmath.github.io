@@ -165,13 +165,15 @@ y'=\lambda y
 
 Yeah, I said it.
 
-Now, let's try to solve this. Well, this differential equation says that the rate of change is proportional to the value of the function. We can see $$y=0$$ trivially satisfies the equation, so we can accept that $$y=0$$ is a possible solution and just assume that $$y\neq0$$ to consider the proportionality constant
+Just getting down to business solving it, we can divide both sides by $$y$$ to get help us utilize the chain rule to reverse the differentiation. However, dividing by $$y$$ eliminates the valid solution $$y=0$$, so keep that in mind.
 
 $$\frac{y'}{y}=\lambda$$
 
-But, wait. $$\frac{y'}{y}=\frac{d}{dt}\ln\left\lvert y \right\rvert$$. So $$\frac{d}{dt}\ln\left\lvert y \right\rvert=\lambda$$. That is,
+But $$\frac{y'}{y}=\frac{d}{dt}\ln\left\lvert y \right\rvert$$. So $$\frac{d}{dt}\ln\left\lvert y \right\rvert=\lambda$$. That is,
 
 $$\ln\left\lvert y \right\rvert=\lambda t+c\implies \left\lvert y \right\rvert=e^ce^{\lambda t}$$
+
+Eliminating the absolute value would give us a $$\pm$$, and since we also know $$y=0$$ is a soultion, we can just say
 
 $$\implies y=Ce^{\lambda t}\implies y\in\operatorname{span}(e^{\lambda t})$$
 
