@@ -2,7 +2,7 @@
 layout: distill
 title: Constant Coefficient ODEs Made Simple with Linear Operators
 date: 2023-11-11
-description: Eigenvectors and operators reveal a hidden intuition to the most important type of differential equation
+description: No more guessing. Let's make it intuitive with linear algebra.
 comments: true
 importance: 1
 featured: true
