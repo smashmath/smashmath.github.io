@@ -64,13 +64,15 @@ From this point on, we assume that $$P$$ satisfies $$P^2=P$$.
 
 $$x = Px + (x - Px)$$
 
-$$P(x - Px) = Px - P^2x = Px - Px = 0 \implies x - Px \in \text{ker}(P)$$. Therefore, all $$x$$ can be written as the sum of some $$Px \in \text{im}(P)$$ and $$x - Px \in \text{ker}(P)$$. Thus, $$\mathbb{F}^n = \text{im}(P) + \text{ker}(P)$$. If
+$$P(x - Px) = Px - P^2x = Px - Px = 0$$ 
+
+$$\implies x - Px \in \text{ker}(P)$$ 
+
+Therefore, all $$x$$ can be written as the sum of some $$Px \in \text{im}(P)$$ and $$x - Px \in \text{ker}(P)$$. Thus, $$\mathbb{F}^n = \text{im}(P) + \text{ker}(P)$$. If
 
 $$\begin{multline*}
 v \in \text{im}(P) \cap \text{ker}(P) \\\implies v = Px \land Pv = 0 = P(Px) = Px = v \\\implies v = 0
 \end{multline*}$$
-
-$$v \in \text{im}(P) \cap \text{ker}(P) \implies v = Px \land Pv = 0 = P(Px) = Px = v \implies v = 0$$
 
 Therefore,
 
