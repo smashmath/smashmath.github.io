@@ -2,11 +2,48 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
-nav: false
+description: Classes I have tutored or TA'd for
+nav: True
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+# UC Riverside
 
-Organize your courses by years, topics, or universities, however you like!
+Classes I was/am a TA for.
+
+## 2024
+
+### Spring
+- MATH031: Linear Algebra (Two Sections)
+
+## 2023
+
+### Fall
+- MATH031: Linear Algebra
+- MATH046: Differential Equations (Two Sections)
+
+# Moorpark College
+- PALS: Peer Assisted Learning Leader
+- CET: Course Embedded Tutor
+
+## 2021
+
+### Spring
+- MATH M35: Differential Equations (PALS)
+
+## 2020
+
+### Fall
+- MATH M31: Linear Algebra (PALS)
+
+### Summer
+- MATH M25C: Calculus III (Multivariable Calculus) (CET)
+
+### Spring
+- MATH M31: Linear Algebra (CET)
+- MATH M25C: Calculus III (Multivariable Calculus) (PALS)
+
+## 2019
+
+### Fall
+- MATH M25A: Calculus I (PALS)
