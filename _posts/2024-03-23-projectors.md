@@ -66,6 +66,10 @@ $$x = Px + (x - Px)$$
 
 $$P(x - Px) = Px - P^2x = Px - Px = 0 \implies x - Px \in \text{ker}(P)$$. Therefore, all $$x$$ can be written as the sum of some $$Px \in \text{im}(P)$$ and $$x - Px \in \text{ker}(P)$$. Thus, $$\mathbb{F}^n = \text{im}(P) + \text{ker}(P)$$. If
 
+$$\begin{multline*}
+v \in \text{im}(P) \cap \text{ker}(P) \\\implies v = Px \land Pv = 0 = P(Px) = Px = v \\\implies v = 0
+\end{multline*}$$
+
 $$v \in \text{im}(P) \cap \text{ker}(P) \implies v = Px \land Pv = 0 = P(Px) = Px = v \implies v = 0$$
 
 Therefore,
@@ -129,6 +133,10 @@ How can we find $$w$$ and $$k$$? To find $$w$$, we can use the projector $$P$$ f
 $$k=v-w=v-Pv=(I-P)v$$
 
 We can verify as well that $$I-P$$ is indeed also a projector.
+
+$$\begin{multline*}
+(I-P)^2=I^2-2P+P^2\\=I-2P+P=I-P
+\end{multline*}$$
 
 $$(I-P)^2=I^2-2P+P^2=I-2P+P=I-P$$
 
@@ -203,7 +211,9 @@ $$A^*x=A^*Ac+A^*x_{W^\perp}=A^*Ac+0$$
 
 Since the entries of $$A^*x_{W^\perp}$$ will be the inner product of vectors in $$W$$ with a vector in $$W^\perp$$, then that term zeros out. Because $$A$$ is full rank, then $$A^*A$$ is invertible so,
 
-$$c=(A^*A)^{-1}A^*x \implies A(A^*A)^{-1}A^*x = Ac = x_W$$
+$$c=(A^*A)^{-1}A^*x $$
+
+$$\implies A(A^*A)^{-1}A^*x = Ac = x_W$$
 
 Therefore, $$P=A(A^*A)^{-1}A^*$$ is the projector.
 
@@ -280,7 +290,9 @@ $$\begin{pmatrix} v_1^*x \\ \vdots \\ v_n^*x \end{pmatrix} = U^*x$$
 
 **Remark:** It follows that
 
-$$x = (v_1 \cdot x)v_1 + \ldots + (v_n \cdot x)v_n = U(U^*x) = UU^*x$$
+$$\begin{multline*}
+x = (v_1 \cdot x)v_1 + \ldots + (v_n \cdot x)v_n \\= U(U^*x) = UU^*x
+\end{multline*}$$
 
 implying that $$UU^* = I$$.
 
@@ -292,13 +304,17 @@ $$\beta = \left\{ \frac{1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix} \pi\sqrt{2} \\ e \e
 
 and say we want to express the vector $$\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix}$$ as a linear combination of those vectors.
 
-$$\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} = \frac{c_1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix} + \frac{c_2}{\sqrt{2\pi^2+e^2}}\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}$$
+$$\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} =c_1 \frac{\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix}}{\sqrt{2\pi^2+e^2}} + c_2\frac{\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}}{\sqrt{2\pi^2+e^2}}$$
 
 I do not care what you say, you simply *cannot* make me solve that system of equations. But, luckily, we don't have to! The dot products are given by the transpose of the matrix
 
 $$\frac{\begin{pmatrix} \pi\sqrt{2} & e \\ -e & \pi\sqrt{2} \end{pmatrix}}{\sqrt{2\pi^2+e^2}}\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} = \frac{\begin{pmatrix} \pi\sqrt{10} + e\pi^2 \\ \pi^3\sqrt{2} - e\sqrt{5} \end{pmatrix}}{\sqrt{2\pi^2+e^2}} $$
 
 Therefore,
+
+$$\begin{multline*}
+\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} \\= \frac{\pi\sqrt{10} + e\pi^2}{2\pi^2 + e^2}\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix} + \frac{\pi^3\sqrt{2} - e\sqrt{5}}{2\pi^2 + e^2}\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}
+\end{multline*}$$
 
 $$\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} = \frac{\pi\sqrt{10} + e\pi^2}{2\pi^2 + e^2}\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix} + \frac{\pi^3\sqrt{2} - e\sqrt{5}}{2\pi^2 + e^2}\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}$$
 
@@ -348,6 +364,11 @@ No $$A^*A$$ inverse shenanigans. The reason is that $$Q^*Q = I$$, so the formula
 $$P = QQ^*$$
 
 can actually be a $$Q$$ from the $$QR$$ factorization of any matrix $$A$$ with full column rank and the same column space. Since $$R$$ will be invertible,
+
+$$\begin{multline*}
+A(A^*A)^{-1} A^* \\= QR((QR)^*QR)^{-1} (QR)^* \\= QR(R^*Q^*QR)(R^*Q^*)\\
+= QR(R^*R)^{-1} R^*Q^* \\= QR(R^{-1} (R^*)^{-1})R^*Q^* \\= QQ^*
+\end{multline*}$$
 
 $$A(A^*A)^{-1} A^* = QR((QR)^*QR)^{-1} (QR)^* = QR(R^*Q^*QR)(R^*Q^*)$$
 
