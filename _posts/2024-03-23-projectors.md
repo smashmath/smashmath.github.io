@@ -140,8 +140,6 @@ $$\begin{multline*}
 (I-P)^2=I^2-2P+P^2\\=I-2P+P=I-P
 \end{multline*}$$
 
-$$(I-P)^2=I^2-2P+P^2=I-2P+P=I-P$$
-
 Therefore, we define the complementary projector of $$P$$ to be
 
 **Definition:** The **complementary projector** of the projector $$P$$ is $$I-P$$, which projects onto the kernel of $$P$$.
@@ -318,16 +316,12 @@ $$\begin{multline*}
 \begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} \\= \frac{\pi\sqrt{10} + e\pi^2}{2\pi^2 + e^2}\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix} + \frac{\pi^3\sqrt{2} - e\sqrt{5}}{2\pi^2 + e^2}\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}
 \end{multline*}$$
 
-$$\begin{pmatrix} \sqrt{5} \\ \pi^2 \end{pmatrix} = \frac{\pi\sqrt{10} + e\pi^2}{2\pi^2 + e^2}\begin{pmatrix} \pi\sqrt{2} \\ e \end{pmatrix} + \frac{\pi^3\sqrt{2} - e\sqrt{5}}{2\pi^2 + e^2}\begin{pmatrix} -e \\ \pi\sqrt{2} \end{pmatrix}$$
-
 As a bonus, we get the inverse of that nasty matrix to be
 
 $$\begin{multline*}
 \left(\frac{1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix}\pi\sqrt{2}&-e\\e&\pi\sqrt{2}\end{pmatrix}\right)^{-1}\\
 =\frac{1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix}\pi\sqrt{2}&e\\-e&\pi\sqrt{2}\end{pmatrix}
 \end{multline*}$$
-
-$$\left(\frac{1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix}\pi\sqrt{2}&-e\\e&\pi\sqrt{2}\end{pmatrix}\right)^{-1}=\frac{1}{\sqrt{2\pi^2+e^2}}\begin{pmatrix}\pi\sqrt{2}&e\\-e&\pi\sqrt{2}\end{pmatrix}$$
 
 ## Unitary matrices
 
@@ -371,10 +365,6 @@ $$\begin{multline*}
 A(A^*A)^{-1} A^* \\= QR((QR)^*QR)^{-1} (QR)^* \\= QR(R^*Q^*QR)(R^*Q^*)\\
 = QR(R^*R)^{-1} R^*Q^* \\= QR(R^{-1} (R^*)^{-1})R^*Q^* \\= QQ^*
 \end{multline*}$$
-
-$$A(A^*A)^{-1} A^* = QR((QR)^*QR)^{-1} (QR)^* = QR(R^*Q^*QR)(R^*Q^*)$$
-
-$$= QR(R^*R)^{-1} R^*Q^* = QR(R^{-1} (R^*)^{-1})R^*Q^* = QQ^*$$
 
 **Remark:** If $$A$$ has orthogonal columns instead of orthonormal, then $$A^*A \neq I$$, but it will be diagonal. So $$A(A^*A)^{-1} A^*$$ is not that bad. However, the diagonal entries are just the norm squared, so putting $$(A^*A)^{-1}$$ is equivalent to dividing the columns of $$A$$ (and the rows of $$A^*$$) by the norm, normalizing the columns. Thus, we still get the same answer.
 
