@@ -2,13 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: i am a math student and tutor
+subtitle: i am a math phd student and tutor
 
 profile:
   align: right
   image: pic.jpg
   address: > 
-    <p>Taylor Grant</p> 
+    <p>Taylor Fisher</p> 
     <p>discord: taylornix</p>   
     <p>e</p> 
     <p>california CA</p>
