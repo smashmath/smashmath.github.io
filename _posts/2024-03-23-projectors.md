@@ -44,7 +44,7 @@ For simplicity, we will let $$\mathbb{F}$$ be $$\mathbb{R}$$ or $$\mathbb{C}$$.
 
 ## Idempotent Matrices
 
-**Definition:** A matrix $$P \in \mathbb{F}^{n \times n}$$ is a **Projector** if $$P^2 = P$$. This matrix is also said to be idempotent. We say that $$P$$ projects vectors *onto* $$\text{im}(P)$$ *along* $$\text{ker}(P)$$.
+**Definition:** A matrix $$P \in \mathbb{F}^{n \times n}$$ is said to be a **Projector** if $$P^2 = P$$. This matrix is also said to be 'idempotent'. We say that $$P$$ projects vectors *onto* $$\text{im}(P)$$ *along* $$\text{ker}(P)$$.
 
 Note that the only invertible projector is the identity matrix.
 
@@ -54,7 +54,11 @@ $$P^2x=P(Px)=Pw=Px$$
 
 $$\implies P^2x=Px$$
 
-for all $$x$$. Therefore, a projector should satisfy $$P^2=P$$. It's not necessarily obvious that if $$P^2=P$$ then $$P$$ is a projector, however. To prove that, we need some more groundwork.
+for all $$x$$. Therefore, a projector should satisfy $$P^2=P$$. 
+
+To summarize: $$P$$ takes in $$x$$ and outputs the component of $$x$$ in the direction of $$W$$ (or the component in $$W$$). Thus, repeatedly applying $$P$$ shouldn't change the output because the result is already *in* $$W$$.
+
+It's not necessarily obvious that if $$P^2=P$$ then $$P$$ is a projector, however. To prove that, we need some more groundwork.
 
 From this point on, we assume that $$P$$ satisfies $$P^2=P$$.
 
