@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Classes I have tutored or TA'd for
+description: Classes I have officially tutored or TA'd for
 nav: True
 nav_order: 5
 ---
@@ -16,11 +16,15 @@ Classes I was/am a TA for.
 ### Spring
 - MATH031: Linear Algebra (Two Sections)
 
+---
+
 ## 2023
 
 ### Fall
 - MATH031: Linear Algebra
 - MATH046: Differential Equations (Two Sections)
+
+---
 
 # Moorpark College
 - PALS: Peer Assisted Learning Leader
@@ -30,6 +34,8 @@ Classes I was/am a TA for.
 
 ### Spring
 - MATH M35: Differential Equations (PALS)
+
+---
 
 ## 2020
 
@@ -42,6 +48,8 @@ Classes I was/am a TA for.
 ### Spring
 - MATH M31: Linear Algebra (CET)
 - MATH M25C: Calculus III (Multivariable Calculus) (PALS)
+
+---
 
 ## 2019
 
