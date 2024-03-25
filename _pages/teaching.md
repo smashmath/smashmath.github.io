@@ -11,6 +11,8 @@ nav_order: 5
 
 Classes I was/am a TA for.
 
+---
+
 ## 2024
 
 ### Spring
@@ -29,6 +31,8 @@ Classes I was/am a TA for.
 # Moorpark College
 - PALS: Peer Assisted Learning Leader
 - CET: Course Embedded Tutor
+
+---
 
 ## 2021
 
