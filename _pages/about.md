@@ -9,7 +9,7 @@ profile:
   image: pic.jpg
   address: > 
     <p>Taylor Fisher</p> 
-    <p>discord: taylornix</p>   
+    <p>discord: eigentaylor</p>   
     <p>e</p> 
     <p>california CA</p>
     <p>this is not actually a picture of me (see photo credit below)</p>  
