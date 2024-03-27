@@ -8,7 +8,7 @@ importance: 3
 categories: differential-equations
 tags: systems-of-differential-equations
 authors:  
-  - name: Taylor Grant
+  - name: Taylor G. F.
     url: ""
     affiliations:
       name: None

@@ -9,7 +9,7 @@ featured: true
 tags: best
 category: differential-equations
 authors:
-  - name: Taylor Grant
+  - name: Taylor G. F.
     url: ""
     affiliations:
       name: None

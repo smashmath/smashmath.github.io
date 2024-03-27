@@ -8,7 +8,7 @@ importance: 3
 tags: differential equations
 category: differential equations
 authors:  
-  - name: Taylor Grant
+  - name: Taylor G. F.
     url: ""
     affiliations:
       name: None

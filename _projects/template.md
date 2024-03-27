@@ -7,7 +7,7 @@ comments: true
 importance: 3
 category:
 authors:  
-  - name: Taylor Grant
+  - name: Taylor G. F.
     url: ""
     affiliations:
       name: None
