@@ -54,11 +54,13 @@ $$P^2x=P(Px)=Pw=Px$$
 
 $$\implies P^2x=Px$$
 
-for all $$x$$. Therefore, a projector should satisfy $$P^2=P$$. 
+for all $$x$$. Therefore, a projector should satisfy $$P^2=P$$.
+
+We remark that this construction of $$Pw=w$$ and $$Pk=0$$ implies that we can decompose $$\mathbb{F}^n$$ into a direct sum of the eigenspaces with eigenvalues $$1$$ and $$0$$. We will prove this shortly.
 
 To summarize: $$P$$ takes in $$x$$ and outputs the component of $$x$$ in the direction of $$W$$ (or the component in $$W$$). Thus, repeatedly applying $$P$$ shouldn't change the output because the result is already *in* $$W$$.
 
-It's not necessarily obvious that if $$P^2=P$$ then $$P$$ is a projector, however. To prove that, we need some more groundwork.
+It's not necessarily obvious that if $$P^2=P$$ then $$P$$ is a projector, however. To prove that, we need some more groundwork. Some questions we need to answer first: How do we know that $$\mathbb{F}^n$$ will be a direct sum of the image and kernel of $$P$$?
 
 From this point on, we assume that $$P$$ satisfies $$P^2=P$$.
 
@@ -100,7 +102,7 @@ $$\implies (\lambda^2-\lambda) v=0 \implies \lambda=0,1$$
 
 $$v=Px \implies Pv=P^2x=Px=v$$
 
-Then $$Pv=v$$. If $$v \in \text{ker}(P)$$, then $$Pv=0=v$$, so $$v$$ is an eigenvector with eigenvalue $$1$$, or $$v=0$$. Thus, $$\text{im}(P) \subseteq E_1$$.
+Then $$Pv=v$$. If $$v \in \text{ker}(P)$$, then $$Pv=0=v$$. Thus, either $$v$$ is an eigenvector with eigenvalue $$1$$, or $$v=0$$. That is, $$\text{im}(P) \subseteq E_1$$.
 
 The other direction is quite simple. If $$v$$ is an eigenvector with eigenvalue $$1$$, then $$Pv=v$$ implies $$v \in \text{im}(P)$$. Therefore,
 
@@ -112,11 +114,7 @@ $$\text{im}(P)=E_1$$
 
 $$\mathbb{F}^n=\text{im}(P) \oplus \text{ker}(P)=E_1 \oplus E_0$$
 
-If $$\beta_0$$ is a basis for $$E_0$$ and $$\beta_1$$ is a basis for $$E_1$$, and $$\beta=\beta_0 \cup \beta_1$$, then $$\text{span}(\beta)=\mathbb{F}^n$$. By rank-nullity,
-
-$$n=\text{rank}(P)+\text{nullity}(P)=\text{dim}(E_1)+\text{dim}(E_0)$$
-
-Therefore, $$\beta$$ is a set of $$n$$ vectors which spans $$\mathbb{F}^n$$, implying it is a basis. That is, we have a basis of eigenvectors, implying that $$P$$ is diagonalizable.
+Since $$\mathbb{F}^n$$ is a direct sum of eigenspaces of $$P$$, then $$P$$ must be diagonalizable (as this implies there exists a basis of eigenvectors).
 
 For a slightly slicker and less intuitive proof (something I definitely love), we can also use that
 
