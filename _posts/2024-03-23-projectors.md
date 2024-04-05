@@ -142,7 +142,7 @@ $$\begin{multline*}
 (I-P)^2=I^2-2P+P^2\\=I-2P+P=I-P
 \end{multline*}$$
 
-Therefore, we define the complementary projector of $$P$$ to be...
+Therefore, we define the complementary projector of $$P$$ as follows:
 
 **Definition:** The **complementary projector** of the projector $$P$$ is $$I-P$$, which projects onto the kernel of $$P$$.
 
