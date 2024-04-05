@@ -46,9 +46,9 @@ For simplicity, we will let $$\mathbb{F}$$ be $$\mathbb{R}$$ or $$\mathbb{C}$$.
 
 **Definition:** A matrix $$P \in \mathbb{F}^{n \times n}$$ is said to be a **Projector** if $$P^2 = P$$. This matrix is also said to be 'idempotent'. We say that $$P$$ projects vectors *onto* $$\text{im}(P)$$ *along* $$\text{ker}(P)$$.
 
-Note that the only invertible projector is the identity matrix.
+Note that the only invertible projector is the identity matrix (this is a simple thing to prove).
 
-Why would this be the *definition* for a projector? What does $$P^2 = P$$ have to do with projections? The general idea is this: Say $$\mathbb{F}^{n}=W\oplus K$$, and we have $$P$$ projects onto $$W$$ along $$K$$. That means that every vector $$x$$ can be written in the form $$x=w+k$$ for some $$w\in W$$ and $$k\in K$$, this representation is unique, and we expect that $$Px=w$$ and $$Pw=w$$, implying that $$Px=Pw$$. This is because $$w$$ is already in $$W$$, so it shouldn't change under the projection. If we examine this more closely, it means that 
+Why would this be the *definition* for a projector? What does $$P^2 = P$$ have to do with projections? The general idea is this: Say $$\mathbb{F}^{n}=W\oplus K$$, and we have $$P$$ projects onto $$W$$ along $$K$$. That means that every vector $$x$$ can be written in the form $$x=w+k$$ for some $$w\in W$$ and $$k\in K$$, this representation is unique, and we expect that $$Px=w$$ and $$Pw=w$$, implying that $$Px=Pw$$. This is because $$w$$ is already in $$W$$, so it shouldn't change under the projection. If we examine this more closely, it means that
 
 $$P^2x=P(Px)=Pw=Px$$
 
