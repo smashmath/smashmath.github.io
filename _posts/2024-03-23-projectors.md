@@ -364,8 +364,12 @@ $$P = QQ^*$$
 can actually be a $$Q$$ from the $$QR$$ factorization of any matrix $$A$$ with full column rank and the same column space. Since $$R$$ will be invertible,
 
 $$\begin{multline*}
-A(A^*A)^{-1} A^* \\= QR((QR)^*QR)^{-1} (QR)^* \\= QR(R^*Q^*QR)(R^*Q^*)\\
-= QR(R^*R)^{-1} R^*Q^* \\= QR(R^{-1} (R^*)^{-1})R^*Q^* \\= QQ^*
+A(A^*A)^{-1} A^* \\
+= QR((QR)^*QR)^{-1} (QR)^* \\
+= QR(R^*Q^*QR)^{-1}(R^*Q^*)\\
+= QR(R^*R)^{-1} R^*Q^* \\
+= QR(R^{-1} (R^*)^{-1})R^*Q^* \\
+= QQ^*
 \end{multline*}$$
 
 **Remark:** If $$A$$ has orthogonal columns instead of orthonormal, then $$A^*A \neq I$$, but it will be diagonal. So $$A(A^*A)^{-1} A^*$$ is not that bad. However, the diagonal entries are just the norm squared, so putting $$(A^*A)^{-1}$$ is equivalent to dividing the columns of $$A$$ (and the rows of $$A^*$$) by the norm, normalizing the columns. Thus, we still get the same answer.
