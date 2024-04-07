@@ -8,7 +8,7 @@ importance: 3
 tags:
 category:
 authors:  
-  - name: Taylor G. F.
+  - name: Taylor F.
     url: ""
     affiliations:
       name: None

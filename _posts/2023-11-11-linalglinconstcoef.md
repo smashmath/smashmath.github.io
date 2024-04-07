@@ -9,7 +9,7 @@ featured: true
 tags: best
 category: differential-equations
 authors:
-  - name: Taylor G. F.
+  - name: Taylor F.
     url: ""
     affiliations:
       name: None

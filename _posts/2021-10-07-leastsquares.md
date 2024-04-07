@@ -7,7 +7,7 @@ comments: true
 importance: 3
 categories: linear-algebra
 authors:  
-  - name: Taylor G. F.
+  - name: Taylor F.
     url: ""
     affiliations:
       name: None
