@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Introduction to Least Squares Part 2 (Electric Boogaloo)
-date: 2024-04-7
+date: 2024-04-15
 description: Why the heck do we multiply by the transpose
 comments: true
 importance: 3
