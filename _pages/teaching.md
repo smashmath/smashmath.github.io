@@ -58,4 +58,5 @@ Classes I was/am a TA for.
 ## 2019
 
 ### Fall
+- MATH M16A: Applied Calculus I (PALS)
 - MATH M25A: Calculus I (PALS)
