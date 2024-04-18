@@ -158,7 +158,11 @@ In general, if $$A$$ is a $$2\times2$$ matrix with eigenvalues $$\lambda_1,\lamb
 
 A proof of this "theorem" is included at the end.
 
-This does not generalize well to higher dimensions. However, if $$A$$ is $$n\times n$$ and has a nondefective eigenvalue $$\lambda_1$$ repeated $$n-1$$ times, then the columns of $$A-\lambda_1I$$ will be scalar multiples of the other eigenvalue. So there's that, I guess. :man_shrugging:
+This generalizes to any matrix which has a degree two minimal polynomial. This includes any diagonalizable matrix with two distinct eigenvalues, or any matrix with only one distinct eigenvalue that has Jordan blocks of size two or smaller. Basically, you just need that 
+
+$$(A-\lambda_1I)(A-\lambda_2I)=0$$
+
+for some $$\lambda_1,\lambda_2$$.
 
 ### Example of Applying the E.C.T.
 
@@ -204,65 +208,30 @@ At least *most* of the time, mathematics profesors tend to use matrices with nic
 
 ## Proof of the The Eigenvector Columns Theorem
 
-To get a general idea, we start with any $$2\times2$$ diagonalizable matrix $$A$$. By definition we can decompose it into the form $$A=PDP^{-1}$$. The entries of the diagonal matrix $$D$$ will be the eigenvalues $$\lambda_1,\lambda_2$$, and the columns of $$P$$ will be the corresponding eigenvectors $$\textbf{v}_1,\textbf{v}_2$$.
+(Updated 4/17/24) This revised proof is cleaner and shows that this actually generalizes to some special cases of larger matrices.
 
-$$A=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}\lambda_1&0\\0&\lambda_2\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
+This theorem relies on the fact that the minimal polynomial has a quadratic degree or lower. By the Cayley-Hamilton theorem,
 
-As we can write $$I=PIP^{-1}$$, when we subtract $$\lambda I$$ from A, we get
+$$(A-\lambda_1I)(A-\lambda_2I)=(A-\lambda_2)(A-\lambda_1)=0$$
 
-$$A-\lambda I=P(D-\lambda I)P^{-1}$$
+Now, remember that a vector is in the eigenspace of eigenvalue $$\lambda$$ if it's in $$\ker(A-\lambda I)$$. But,
 
-$$A-\lambda I=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}\lambda_1-\lambda&0\\0&\lambda_2-\lambda\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
+$$(A-\lambda_1)(A-\lambda_2)=0\implies (A-\lambda_2 I)\in\ker(A-\lambda_1I)$$
 
-Observe that when $$\lambda$$ is equal to one of the eigenvalues, the center matrix ends up having only one nonzero entry, which allows us to write it in a very convinient form. For example, when $$\lambda=\lambda_1$$
+This means the columns of $$A-\lambda_2I$$ must be in the eigenspace of $$\lambda_1$$. That is, the columns of $$A-\lambda_2I$$ satisfy $$Av=\lambda_1v$$. So the columns must be scalar multiples of the eigenvectors with eigenvalue $$\lambda_1$$.
 
-$$D-\lambda I=
-\begin{pmatrix}0&0\\0&\lambda_2-\lambda_1\end{pmatrix}=
-\begin{pmatrix}0\\1\end{pmatrix}
-\begin{pmatrix}0&\lambda_2-\lambda_1\end{pmatrix}$$
+Similarly, since
 
-Thus,
+$$(A-\lambda_1I)(A-\lambda_2I)=(A-\lambda_2I)(A-\lambda_1I)$$
 
-$$A-\lambda_1 I=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}0\\1\end{pmatrix}
-\begin{pmatrix}0&\lambda_2-\lambda_1\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
+we can see that $$(A-\lambda_1I)\in\ker(A-\lambda_2I)$$. 
 
-Using the column perspective of matrix multiplication,
+This also works if $$\lambda_1=\lambda_2$$, which takes care of the case of repeated eigenvalues.
 
-$$A-\lambda_1 I=\textbf{v}_2
-\begin{pmatrix}0&\lambda_2-\lambda_1\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
+Further, this implies that this principle holds for any matrix which has a degree two minimal polynomial (degree one is trivial, as that means it's a scalar matrix). This includes any diagonalizable matrix with two distinct eigenvalues, or any matrix with only one distinct eigenvalue that has Jordan blocks of size two or smaller.
 
-Therefore, the columns of $$A-\lambda_1I$$ will simply be scalar multiples of $$\textbf{v}_2$$, the eigenvector for $$\lambda_2$$. This process is indentical for $$A-\lambda_2I$$.
+Note that this actually also gives a general theoretical method of finding eigenvectors if you have the factored minimal polynomial. If
 
-However, for a nondiagonalizable $$2\times2$$ matrix $$A$$, the center matrix is slightly different. We cannot get $$A=PDP^{-1}$$ where $$D$$ is diagonal. We can, however, get $$A$$ into Jordan-Normal Form. If the eigenvalue is defective, then $$\lambda_2=\lambda_1$$, and we can decompose $$A$$ as $$A=PJP^{-1}$$. Where
+$$(A-\lambda_1I)\ldots(A-\lambda_nI)=0$$
 
-$$J=\begin{pmatrix}\lambda_1&1\\0&\lambda_1\end{pmatrix}$$
-
-In this case, the first column of $$P$$ will be the eigenvector, while the second column will be unimportant to us (but if you are curious, the second column will be a generalized eigenvector).
-
-Similar to the diagonalizable case, subtracting a scalar matrix from $$A$$ results in simply subtracting the scalar matrix from the center matrix.
-
-$$A-\lambda I=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}\lambda_1-\lambda&1\\0&\lambda_1-\lambda\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
-
-$$A-\lambda_1 I=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}0&1\\0&0\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
-
-$$A-\lambda_1 I=\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)
-\begin{pmatrix}1\\0\end{pmatrix}
-\begin{pmatrix}0&1\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
-
-$$A-\lambda_1 I=\textbf{v}_1
-\begin{pmatrix}0&1\end{pmatrix}
-\bigg(\textbf{v}_1\quad \textbf{v}_2\bigg)^{-1}$$
-
-And once again, the columns are necessarily scalar multiples of the eigenvector. Technically, this is still consistent with the diagonalizable case as $$\lambda_2=\lambda_1$$ implies $$A-\lambda_2I=A-\lambda_1 I$$. So the one eigenvector is technically the eigenvector of the "other" eigenvalue.
+Then the columns of $$(A-\lambda_2I)\ldots(A-\lambda_nI)$$ will be scalar multiples of eigenvectors with eigenvalue $$\lambda_1$$. This is probably more work, though (and requires that you happen to know the minimal polynomial). But, hey, it's a thing.
