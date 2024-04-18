@@ -214,11 +214,11 @@ At least *most* of the time, mathematics profesors tend to use matrices with nic
 
 This theorem relies on the fact that the minimal polynomial has a quadratic degree or lower. By the Cayley-Hamilton theorem,
 
-$$(A-\lambda_1I)(A-\lambda_2I)=(A-\lambda_2)(A-\lambda_1)=0$$
+$$(A-\lambda_1I)(A-\lambda_2I)==0$$
 
 Now, remember that a vector is in the eigenspace of eigenvalue $$\lambda$$ if it's in $$\ker(A-\lambda I)$$. But,
 
-$$(A-\lambda_1)(A-\lambda_2)=0\implies (A-\lambda_2 I)\in\ker(A-\lambda_1I)$$
+$$(A-\lambda_1I)(A-\lambda_2I)=0\implies (A-\lambda_2 I)\in\ker(A-\lambda_1I)$$
 
 This means the columns of $$A-\lambda_2I$$ must be in the eigenspace of $$\lambda_1$$. That is, the columns of $$A-\lambda_2I$$ satisfy $$Av=\lambda_1v$$. So the columns must be scalar multiples of the eigenvectors with eigenvalue $$\lambda_1$$.
 
