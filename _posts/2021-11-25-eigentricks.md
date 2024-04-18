@@ -29,6 +29,8 @@ toc:
   - name: Proof of the The Eigenvector Columns Theorem
 ---
 
+(Updated 4/17/24 with a smoother proof for the ECT)
+
 # The Characteristic Polynomial
 
 First we examine the general characteristic polynomial of any $$2\times2$$ matrix
@@ -158,7 +160,7 @@ In general, if $$A$$ is a $$2\times2$$ matrix with eigenvalues $$\lambda_1,\lamb
 
 A proof of this "theorem" is included at the end.
 
-This generalizes to any matrix which has a degree two minimal polynomial. This includes any diagonalizable matrix with two distinct eigenvalues, or any matrix with only one distinct eigenvalue that has Jordan blocks of size two or smaller. Basically, you just need that 
+This generalizes to any matrix which has a degree two minimal polynomial. This includes any diagonalizable matrix with two distinct eigenvalues, or any matrix with only one distinct eigenvalue that has Jordan blocks of size two or smaller. Basically, you just need that
 
 $$(A-\lambda_1I)(A-\lambda_2I)=0$$
 
