@@ -146,7 +146,9 @@ Therefore, we define the complementary projector of $$P$$ as follows:
 
 **Definition:** The **complementary projector** of the projector $$P$$ is $$I-P$$, which projects onto the kernel of $$P$$.
 
-So if $$P$$ is a projector, it projects onto its image along its kernel. While $$I-P$$ is also a projector, which projects onto the kernel of $$P$$ along the image of $$P$$. If you look back at the proof for Proposition, you'll notice that we essentially wrote
+So if $$P$$ is a projector, it projects onto its image along its kernel. While $$I-P$$ is also a projector, which projects onto the kernel of $$P$$ along the image of $$P$$. It's a good exercise to convince yourself of this. If $$Pv=\lambda v$$, then what is $$(I-P)v$$? Then see what happens if $$\lambda=0,1$$.
+
+If you look back at the proof for Proposition, you'll notice that we essentially wrote
 
 $$x=Px+(I-P)x$$
 
