@@ -120,7 +120,7 @@ For a slightly slicker and less intuitive proof (something I definitely love), w
 
 $$P^2=P \implies P^2-P=P(P-I)=0$$
 
-A rather obscure linear algebra factoid: $$A$$ is diagonalizable if and only if there is some polynomial $$f(x)$$ that is a product of distinct linear factors such that $$f(A)=0$$.
+A rather obscure linear algebra factoid: $$A$$ is diagonalizable if and only if there is some polynomial $$f(x)$$ that is a product of distinct linear factors such that $$f(A)=0$$. This is basically saying that a matrix is diagonalizable matrix if its minimal polynomial is a product of distinct linear factors (we only want Jordan blocks of size 1).
 
 Hence, if $$f(x)=x(x-1)$$, which is a product of distinct linear factors, then $$f(P)=0$$. Since such a polynomial exists, that is enough to prove $$P$$ is diagonalizable.
 
