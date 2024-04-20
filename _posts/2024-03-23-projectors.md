@@ -160,7 +160,7 @@ which is writing $$x$$ as the sum of its component in $$\text{im}(P)$$ and its c
 
 **Proposition:** A projector $$P$$ is an orthogonal projector if and only if $$P$$ is hermitian.
 
-**Proof:** Suppose $$P \in \mathbb{F}^{n\times n}$$ is an orthogonal projection matrix. That is, $$\text{im}(P)$$ is the orthogonal complement to $$\ker(P)$$. Suppose $$\beta_i=\{v_1,\ldots,v_r\}$$ is an orthonormal basis for the image ($$E_1$$), and $$\beta_k=\{u_1,\ldots,u_k\}$$ is an orthonormal basis for the kernel ($$E_0$$). As we proved previously, $$\beta=\beta_i \cup \beta_k$$ is an eigenbasis for $$\mathbb{F}^n$$. But, since they are orthogonal complements, $$\beta$$ is an orthogonal basis. Since $$P$$ has an orthogonal eigenbasis, and it has purely real eigenvalues, then $$P$$ must be hermitian.
+**Proof:** Suppose $$P \in \mathbb{F}^{n\times n}$$ is an orthogonal projection matrix. That is, $$\text{im}(P)$$ is the orthogonal complement to $$\ker(P)$$. Suppose $$\beta_i=\{v_1,\ldots,v_r\}$$ is an orthonormal basis for the image ($$E_1$$), and $$\beta_k=\{u_1,\ldots,u_k\}$$ is an orthonormal basis for the kernel ($$E_0$$). As we proved previously, $$\beta=\beta_i \cup \beta_k$$ is an eigenbasis for $$\mathbb{F}^n$$. But, since they are orthogonal complements, $$\beta$$ is an orthogonal basis. Since $$P$$ has an orthonormal eigenbasis, and it has purely real eigenvalues, then $$P$$ must be hermitian.
 
 If $$P$$ is a hermitian projector, then its eigenspaces are orthogonal, because it is hermitian. Therefore, $$E_0^\perp=\ker(P)^\perp=E_1=\text{im}(P)$$. Hence, $$\ker(P)^\perp=\text{im}(P)$$. Therefore, $$P$$ is an orthogonal projector.
 
