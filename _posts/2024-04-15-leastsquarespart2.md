@@ -44,9 +44,9 @@ $$\mathbb{C}^n=W\oplus W^\perp$$
 
 This means that $$b$$ can be written as $$b=w+w_\perp$$. Conceptually this can be understood as writing $$b$$ as a sum of a vector which does make a consistent system, and a vector which can knock us out of being consistent (unless $$w_\perp=0$$).
 
-Now, recall also that the row space of a matrix $$B$$ is the orthogonal complement of the null space of $$B$$. This can be understood intuitively as if $$Bn=0$$, that means the dot product of the rows of $$B$$ and $$n$$ must be zero.
+Now, recall also that the null space of $$B$$ is the orthogonal complement of the row space of a matrix $$\overline{B}$$, which is the column space of $$B^*$$. This can be understood intuitively as $$Bn=0\implies n^*B^*=0$$ means the inner product of the columns of $$B^*$$ and $$n$$ must be zero.
 
-But the column space of $$A$$ is just the row space of $$A^*$$. So the orthgogonal complement of $$W$$ is the null space of $$A^*$$. Thus, $$A^*w_\perp=0$$ and $$A^*b=A^*w$$. Essentially, this means that multiplying by the adjoint (transpose) *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part )
+So the orthogonal complement of the column space of $$B^*$$ is the null space of $$B$$. Then, the orthogonal complement of the column space of $$A$$ is the null space of $$A^*$$. Thus, $$A^*w_\perp=0$$ and $$A^*b=A^*w$$. Essentially, this means that multiplying by the adjoint (transpose) *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part that isn't in the column space).
 
 Since $$w$$ is by definition in the column space of $$A$$, we know $$Ax=w$$ is consistent. Let $$x=c$$ be the solution (that is, $$w=Ac$$).
 
