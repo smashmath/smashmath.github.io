@@ -54,7 +54,7 @@ This does add one complication. While in $$\mathbb{R}^n$$, $$An=0$$ implies that
 
 But if we let $$B=A^*$$ in the expression above, this means the orthogonal complement of the null space of $$A^*$$ is the column space of $$A$$. That is, if a vector $$u$$ is orthogonal to the column space of $$A$$, then $$A^*u=0$$.
 
-Thus, $$A^*w_\perp=0$$ and $$A^*b=A^*w$$. Essentially, this means that multiplying by the adjoint *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part that isn't in the column space).
+Thus, $$A^*w_\perp=0$$ and so $$A^*b=A^*(w+w_\perp)=A^*w$$. Essentially, this means that multiplying by the adjoint *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part that isn't in the column space).
 
 Since $$w$$ is by definition in the column space of $$A$$, we know $$Ax=w$$ is consistent. Let $$x=c$$ be the solution (that is, $$w=Ac$$).
 
