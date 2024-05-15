@@ -42,11 +42,13 @@ We know that every vector space can be decomposed as the direct sum of any subsp
 
 $$\mathbb{C}^n=W\oplus W^\perp$$
 
-This means that $$b$$ can be written as $$b=w+w_\perp$$. Conceptually this can be understood as writing $$b$$ as a sum of a vector which does make a consistent system, and a vector which can knock us out of being consistent (unless $$w_\perp=0$$).
+This means that $$b$$ can be written as $$b=w+w_\perp$$. Conceptually this can be understood as writing $$b$$ as a sum of a vector which does make a consistent system, and a vector which can knock us out of being consistent (i.e. the system is consistent if and only if $$w_\perp=0$$).
 
-Now, recall also that the null space of $$B$$ is the orthogonal complement of the row space of the matrix $$\overline{B}$$, which is the column space of $$B^*$$. This can be understood intuitively as $$Bn=0\implies n^*B^*=0$$ means the inner product of the columns of $$B^*$$ and $$n$$ must be zero.
+But what does it mean to be orthogonal in $$\mathbb{C}^n$$? What is the inner product? Well, like we said before, it's not as simple as just $$w\cdot v=v^Tw$$. Instead, it is $$w\cdot v=v^*w$$, which means the complex dot product is not commutative, but conjugate commutative ($$v\cdot w=\overline{w\cdot v}$$). Though, since we are only interested in orthogonality and dot products of zero, we get a sort of orthogonal symmetry/commutativity ($$v\cdot w=0\iff w\cdot v=0$$).
 
-So the orthogonal complement of the column space of $$B^*$$ is the null space of $$B$$. Then, the orthogonal complement of the column space of $$A$$ is the null space of $$A^*$$. Thus, $$A^*w_\perp=0$$ and $$A^*b=A^*w$$. Essentially, this means that multiplying by the adjoint *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part that isn't in the column space).
+This does add one complication. While in $$\mathbb{R}^n$$, $$An=0$$ implies that $$n$$ is orthogonal to the rows of $$A$$, that isn't quite so in $$\mathbb{C}^n$$, since the inner product requires one vector to be conjugated. That is, while in $$\mathbb{R}^n$$, the row space is the orthogonal complement of the null space, in $$\mathbb{C}^n$$, the null space is the orthogonal complement of the conjugated row space ($$\ker(B)^\perp=\operatorname{row}(\overline{B})$$). But if we let $$B=A^*$$, this means the orthogonal complement of the null space of $$A^*$$ is the column space of $$A$$. That is, if a vector $$u$$ is orthogonal to the column space of $$A$$, then $$A^*u=0$$.
+
+Thus, $$A^*w_\perp=0$$ and $$A^*b=A^*w$$. Essentially, this means that multiplying by the adjoint *sort of* projects us into the column space of $$A$$ (or, at least, zeros out the part that isn't in the column space).
 
 Since $$w$$ is by definition in the column space of $$A$$, we know $$Ax=w$$ is consistent. Let $$x=c$$ be the solution (that is, $$w=Ac$$).
 
