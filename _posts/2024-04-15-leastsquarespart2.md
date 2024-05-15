@@ -16,6 +16,8 @@ toc:
   - name: Why is it the closest solution
 ---
 
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
 This is a very short sequel to my previous post on [least squares](../leastsquares/){:target="_blank"}.
 
 These are the questions I left at the end of that post (in the more general complex form).
