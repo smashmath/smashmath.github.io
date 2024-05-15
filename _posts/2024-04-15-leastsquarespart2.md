@@ -102,4 +102,10 @@ $$x_{least}=VS^{-1}U^*b$$
 
 Which is why we call $$VS^{-1}U^*$$ the "pseudo-inverse of $$A$$". It always gives the smallest least squares solution! This is absolutely as good as it gets for a singular matrix.
 
+I think it's a good exercise to try and show that $$VS^{-1}U^*b$$ is in fact the smallest least squares solution! If you need some hints to get started,
+
+- $$UU^*$$ is a projector onto the column space of $$A$$
+- $$VV^*$$ is a projector onto the column space of $$A^*$$, which is orthogonal to $$\ker(A)$$
+- If $$b=w+w_\perp$$, then what is $$w$$ in terms of $$b$$ and $$U$$?
+
 [hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
