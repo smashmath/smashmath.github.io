@@ -13,6 +13,7 @@ authors:
       name: None
 toc:
   - name: Why is it consistent
+  - name: Why is it the closest solution
 ---
 
 This is a very short sequel to my previous post on [least squares](../leastsquares/){:target="_blank"}.
@@ -59,5 +60,19 @@ $$A^*Ax=A^*b=A^*w=A^*Ac$$
 This clearly has a solution: $$x=c$$, which actually implies that the solution to $$A^*Ax=A^*b$$ is the same as the solution to $$Ax=w$$.
 
 That is, the least squares solution is the solution to the system projected onto the column space. Which actually makes some sense intuitively. If we want the closest solution, we want it to be the solution to the system where the vector is projected orthogonally to the column space. Which actually answers both our questions.
+
+## Why is it the closest solution
+
+Now, I said it answers both of our questions, but perhaps you aren't quite convinced that just because it's the solution to the system where $$b$$ has been projected into the column space. Let's see if I can change your mind.
+
+We "measure" the "closest" solution using $$\norm{b-Ax}^2$$ (minimizing the squares of error: hence, 'least squares').
+
+Note that by orthogonality, we can say that $$\norm{w+w_\perp}^2=\norm{w}^2+\norm{w_\perp}^2$$. But, if we rewrite
+
+$$\norm{b-Ax}^2=\norm{w+w_\perp-Ax}^2=\norm{w-Ax}^2+\norm{w_\perp}^2$$
+
+Notice that no matter *what* $$x$$ is, our squared error will always be $$\geq\norm{w_\perp}^2$$. This is hopefully somewhat intuitive. Since $$w_\perp$$ in a sense measures *how* inconsistent our system is, it acts as a lower bound for our error. Cool, right?
+
+Thus, the only thing we *can* do to minimize error, is to minimize $$\norm{w-Ax}^2$$. The best we can do is making it zero. But... like we said before, $$w=Ac$$ for some $$c$$. Then, $$x=c$$ will give us zero. So $$x=c$$, the solution to $$Ax=w$$, really *is* the solution that minimizes the error!
 
 [hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
