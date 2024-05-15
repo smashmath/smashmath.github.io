@@ -67,7 +67,7 @@ That is, the least squares solution is the solution to the system projected onto
 
 Now, I said it answers both of our questions, but perhaps you aren't quite convinced that just because it's the solution to the system where $$b$$ has been projected into the column space it actually minimizes our error. Let's see if I can change your mind.
 
-We "measure" the "closest" solution using $$\left\lVert b-Ax \right\rVert^2$$ (minimizing the squares of error: hence, 'least squares').
+We measure the "closest" solution using $$\left\lVert b-Ax \right\rVert^2$$ (minimizing the squares of error: hence, 'least squares').
 
 Note that by orthogonality, we can say that $$\left\lVert w+w_\perp \right\rVert^2=\left\lVert w \right\rVert^2+\left\lVert w_\perp \right\rVert^2$$. But, if we rewrite
 
