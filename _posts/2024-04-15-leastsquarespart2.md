@@ -82,7 +82,7 @@ One might object: what if $$A$$ has dependent columns and there are multiple sol
 
 ## The smallest closest solution
 
-If you're very picky, and you want to pick one least squares solution, then you *could* theoretically pick the least squares solution with the minimum magnitude. If $$c$$ is one least squares solution, then any other least squares solution will be of the form $$c+u$$ where $$u\in\ker(A)$$. Then, we can play a similar game in trying to minimize
+If you're very picky, and you want to pick *just one* least squares solution, then you *could* theoretically pick the least squares solution with the minimum magnitude. If $$c$$ is one least squares solution, then any other least squares solution will be of the form $$c+u$$ where $$u\in\ker(A)$$. Then, we can play a similar game in trying to minimize
 
 $$\left\lVert c+u \right\rVert^2=\left\lVert k+k_\perp+u \right\rVert^2=\left\lVert k+u \right\rVert^2+\left\lVert k_\perp \right\rVert^2$$
 
