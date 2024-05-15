@@ -96,7 +96,7 @@ If you are hankering for an expression for the projector into $$\ker(A)^\perp$$,
 
 $$x_{least}=QQ^*c$$
 
-This is because, as we said above, the orthogonal complement of $$\ker(A)$$ is the column space of $$A^*$$.
+This is because, as we said above, the orthogonal complement of $$\ker(A)$$ is the column space of $$A^*$$, and $$QQ^*$$ from the $$QR$$ decomposition projects orthogonally into the column space.
 
 We can actually do much better using the reduced SVD of $$A=USV^*$$, where $$S$$ is square and invertible. Then, you can show that
 
