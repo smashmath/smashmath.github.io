@@ -14,6 +14,7 @@ authors:
 toc:
   - name: Why is it consistent
   - name: Why is it the closest solution
+  - name: The smallest closest solution
 ---
 
 This is a short sequel to my previous post on [least squares](../leastsquares/){:target="_blank"}.
@@ -79,11 +80,13 @@ Thus, the only thing we *can* do to minimize error, is to minimize $$\left\lVert
 
 One might object: what if $$A$$ has dependent columns and there are multiple solutions to $$Ax=w$$? Well, we can see that *all* of those solutions will minimize the error. That is, even if the least squares solution is not unique, every single one will minimize the error! This is because the error is in terms of the magnitude of $$w-Ax$$. And $$w-Ax=0$$ if and only if $$x$$ is a preimage of $$w$$ of $$A$$ (there is no restriction on *which preimage*).
 
+## The smallest closest solution
+
 If you're very picky, and you want to pick one least squares solution, then you *could* theoretically pick the least squares solution with the minimum magnitude. If $$c$$ is one least squares solution, then any other least squares solution will be of the form $$c+u$$ where $$u\in\ker(A)$$. Then, we can play a similar game in trying to minimize
 
 $$\left\lVert c+u \right\rVert^2=\left\lVert k+k_\perp+u \right\rVert^2=\left\lVert k+u \right\rVert^2+\left\lVert k_\perp \right\rVert^2$$
 
-where we are decomposing $$c$$ in terms of $$k\in\ker(A)$$ and $$k_\perp\in\ker(A)^\perp$$. Since our degree of freedom is in choosing $$u$$, we can pick $$u=-k$$, and then we find that the 'least squares least squares solution' is the solution in the orthogonal complement of $$\ker(A)$$.
+where we are decomposing $$c$$ in terms of $$k\in\ker(A)$$ and $$k_\perp\in\ker(A)^\perp$$. Since our degree of freedom is in choosing $$u$$, we should pick $$u=-k$$, and then we find that the 'least squares least squares solution' is the solution in the orthogonal complement of $$\ker(A)$$.
 
 $$x_{least}=\operatorname{proj}_{\ker(A)^\perp}(c)$$
 
