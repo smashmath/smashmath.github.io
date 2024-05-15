@@ -76,7 +76,7 @@ Note that by orthogonality, we can say that $$\left\lVert w+w_\perp \right\rVert
 
 $$\left\lVert b-Ax \right\rVert^2=\left\lVert w+w_\perp-Ax \right\rVert^2=\left\lVert w-Ax \right\rVert^2+\left\lVert w_\perp \right\rVert^2$$
 
-Notice that no matter *what* $$x$$ is, our squared error will always be $$\geq\left\lVert w_\perp \right\rVert^2$$. This is hopefully somewhat intuitive. Since $$w_\perp$$ in a sense tells us *how* inconsistent our system is, its size acts as a lower bound for our error. Cool, right?
+Notice that no matter *what* $$x$$ is, our squared error will always be $$\geq\left\lVert w_\perp \right\rVert^2$$. This is hopefully somewhat intuitive. Since $$w_\perp$$ is the part of $$b$$ that makes our system inconsistent, its size acts as a lower bound for our error, telling us in a sense *how* inconsistent our system is. Cool, right?
 
 Thus, the only thing we *can* do to minimize error, is to minimize $$\left\lVert w-Ax \right\rVert^2$$. The best we can do is make it zero. But... like we said before, $$w=Ac$$ for some $$c$$. Then, $$x=c$$ will give us zero. So $$x=c$$, the solution to $$Ax=w$$, really *is* the solution that minimizes the error!
 
