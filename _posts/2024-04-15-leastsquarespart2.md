@@ -75,6 +75,8 @@ $$\left\lVert b-Ax \right\rVert^2=\left\lVert w+w_\perp-Ax \right\rVert^2=\left\
 
 Notice that no matter *what* $$x$$ is, our squared error will always be $$\geq\left\lVert w_\perp \right\rVert^2$$. This is hopefully somewhat intuitive. Since $$w_\perp$$ in a sense tells us *how* inconsistent our system is, its size acts as a lower bound for our error. Cool, right?
 
-Thus, the only thing we *can* do to minimize error, is to minimize $$\left\lVert w-Ax \right\rVert^2$$. The best we can do is making it zero. But... like we said before, $$w=Ac$$ for some $$c$$. Then, $$x=c$$ will give us zero. So $$x=c$$, the solution to $$Ax=w$$, really *is* the solution that minimizes the error!
+Thus, the only thing we *can* do to minimize error, is to minimize $$\left\lVert w-Ax \right\rVert^2$$. The best we can do is make it zero. But... like we said before, $$w=Ac$$ for some $$c$$. Then, $$x=c$$ will give us zero. So $$x=c$$, the solution to $$Ax=w$$, really *is* the solution that minimizes the error!
+
+One might object: what if $$A$$ has dependent columns and there are multiple solutions to $$Ax=w$$? Well, we can see that *all* of those solutions will minimize the error. That is, even if the least squares solution is not unique, every single one will minimize the error! This is because the error is in terms of the magnitude of $$w-Ax$$. And $$w-Ax=0$$ if and only if $$x$$ is a preimage of $$w$$ of $$A$$ (there is no restriction on *which preimage*).
 
 [hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
