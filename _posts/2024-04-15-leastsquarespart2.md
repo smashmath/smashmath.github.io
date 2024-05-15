@@ -92,8 +92,12 @@ $$x_{least}=\operatorname{proj}_{\ker(A)^\perp}(c)$$
 
 If you are hankering for an expression for the projector into $$\ker(A)^\perp$$, then one method one could use (especially if they're in some sort of computing/programming environment) is to use the $$QR$$ decomposition of $$A^*=QR$$, and then
 
-$$x_{least}=(I-QQ^*)c$$
+$$x_{least}=QQ^*c$$
 
 This is because, as we said above, the orthogonal complement of $$\ker(A)$$ is the column space of $$A^*$$.
+
+We can actually do much better using the reduced SVD of $$A=USV^*$$, where $$S$$ is square and invertible. Then, you can show that
+
+$$x_{least}=VS^{-1}U^*b$$
 
 [hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
