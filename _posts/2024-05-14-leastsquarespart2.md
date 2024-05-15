@@ -34,6 +34,8 @@ If you need a reminder for why we need the *conjugate*, it's because complex num
 
 $$\begin{pmatrix}1&i\end{pmatrix}\begin{pmatrix}1\\i\end{pmatrix}=1^2+i^2=0$$
 
+In $$\mathbb{R}^n$$, we say $$\left\lVert v \right\rVert^2=v^Tv$$, but that would mean this nonzero vector has a magnitude of $$0$$. This is a big no-no, as we should *only* have that the zero vector has a magnitude of $$0$$.
+
 So we can't just say $$w\cdot v=v^Tw$$ and call it a day if we want to be as general as possible. But you are more than welcome to just interpret $$v^*$$ as the transpose, and assume we're talking in terms of real vectors (my complex compulsion prevents me from doing so).
 
 ## Why is it consistent
