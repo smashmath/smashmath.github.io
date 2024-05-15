@@ -100,4 +100,6 @@ We can actually do much better using the reduced SVD of $$A=USV^*$$, where $$S$$
 
 $$x_{least}=VS^{-1}U^*b$$
 
+Which is why we call $$VS^{-1}U^*$$ the "pseudo-inverse of $$A$$". It always gives the smallest least squares solution! This is absolutely as good as it gets for a singular matrix.
+
 [hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
