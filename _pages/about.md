@@ -6,7 +6,7 @@ subtitle: i am a math phd student and tutor
 
 profile:
   align: right
-  image: pic.jpg
+  image: eigenvector.png
   address: > 
     <p>Taylor Fisher</p> 
     <p>discord: eigentaylor</p>   
