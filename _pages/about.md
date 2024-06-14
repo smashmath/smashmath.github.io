@@ -12,7 +12,6 @@ profile:
     <p>discord: eigentaylor</p>   
     <p>e</p> 
     <p>california CA</p>
-    <p>this is not actually a picture of me (see photo credit below)</p>  
     
 
 news: true  # includes a list of news items
