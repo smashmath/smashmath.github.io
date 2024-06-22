@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Title
-date: 2022-6-7
+date: 2024-6-7
 description: desc
 comments: true
 importance: 3
@@ -28,3 +28,5 @@ $$
 [hyperlink](../eigentricks/){:target="_blank"}
 
 [Section c2](#c2)
+
+[hyperlink](https://youtu.be/M5CeQG1YfEQ?si=2J5M9Tdyq01GVAsc){:target="_blank"}
