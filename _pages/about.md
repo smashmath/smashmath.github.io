@@ -58,8 +58,3 @@ things ive ~~discovered~~ independently derived. i think they're all cool, but o
 
 - [New Ways to Calculate Normalized Solutions to Linear Constant-Coefficient Differential Equations](./blog/newnormalized){:target="_blank"}: solve just *one* set of $$n$$ first-order initial value problems to get the $$n$$ normalized solutions to an $$n$$-th order differential equation. this should be the fastest way to find them using a computer. alternatively, find one normalized solution and get the others recursively.
 
----
-
-the picture is not me. it is a stock photo that i bought and have the license to use.
-
-credit: <a href="https://iStock.com/portfolio/ajr_images" target="_blank">iStock.com/ajr_images</a>
