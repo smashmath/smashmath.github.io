@@ -11,3 +11,4 @@ pmatrix
 textbf
 x^n
 nx^
+RREF
