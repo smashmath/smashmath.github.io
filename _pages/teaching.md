@@ -7,7 +7,9 @@ nav: True
 nav_order: 5
 ---
 
-[my linear algebra mini-textbook solution document](https://u.pcloud.link/publink/show?code=kZ6bws0Z9kCS1VwoKIhoAA14JMvXpLRm90YX){:target="_blank"}
+[my linear algebra mini-textbook solution document](assets/pdf/ALLSOLUTIONS-FINAL v5.pdf){:target="_blank"}
+
+[h](https://u.pcloud.link/publink/show?code=kZ6bws0Z9kCS1VwoKIhoAA14JMvXpLRm90YX){:target="_blank"}
 
 
 
