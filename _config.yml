@@ -105,6 +105,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: 196803594576592896 # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
+ko_fi_url: https://ko-fi.com/smashmath # your ko-fi URL
 
 contact_note: >
   best way to contact me is through discord (eigentaylor). please send a message when adding.
