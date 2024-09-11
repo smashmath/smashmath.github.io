@@ -146,6 +146,10 @@
         {%- capture link -%}{{ site.work_url }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
+    {%- if site.ko_fi_url -%}
+        {%- capture link -%}{{ site.ko_fi_url }}{%- endcapture -%}
+        {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}
     {%- if site.wikidata_id -%}
         {%- capture link -%}https://www.wikidata.org/wiki/{{ site.wikidata_id }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
