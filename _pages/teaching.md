@@ -7,7 +7,7 @@ nav: True
 nav_order: 5
 ---
 
-[my linear algebra mini-textbook solution document](/assets/pdf/ALLSOLUTIONS-FINAL%20v5.pdf){:target="_blank"}
+[my linear algebra mini-textbook solution document](/assets/pdf/linalgsolutions.pdf){:target="_blank"}
 
 # UC Riverside
 
