@@ -214,7 +214,7 @@ At least *most* of the time, mathematics profesors tend to use matrices with nic
 
 This theorem relies on the fact that the minimal polynomial has a quadratic degree or lower. By the Cayley-Hamilton theorem,
 
-$$(A-\lambda_1I)(A-\lambda_2I)==0$$
+$$(A-\lambda_1I)(A-\lambda_2I)=0$$
 
 Now, remember that a vector is in the eigenspace of eigenvalue $$\lambda$$ if it's in $$\ker(A-\lambda I)$$. But,
 
