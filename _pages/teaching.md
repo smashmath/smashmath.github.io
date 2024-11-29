@@ -9,8 +9,6 @@ nav_order: 5
 
 [my linear algebra mini-textbook solution document](/assets/pdf/linalgsolutions.pdf){:target="_blank"}
 
-# UC Riverside
-
 Classes I was/am a TA for.
 
 ---
@@ -18,15 +16,15 @@ Classes I was/am a TA for.
 ## 2024
 
 ### Spring
-- MATH031: Linear Algebra (Two Sections)
+- Linear Algebra (Two Sections)
 
 ---
 
 ## 2023
 
 ### Fall
-- MATH031: Linear Algebra
-- MATH046: Differential Equations (Two Sections)
+- Linear Algebra
+- Differential Equations (Two Sections)
 
 ---
 
