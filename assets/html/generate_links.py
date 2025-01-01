@@ -20,10 +20,23 @@ def generate_links():
             continue
         # get the path to the file
         path = current_dir + '/' + file
+        # we need to replace the backslashes with forward slashes
+        #current_dir_slash = current_dir.replace('\\', '/')
+        path = path.replace('\\', '/')
+        #parent_dir = parent_dir.replace('\\', '/')
         # get the link to the file
-        link = 'https://smashmath.github.io/' + path.split(parent_dir)[1]
+        # replace C:/ with https://
+        link = path.replace('C:/', 'https://')
+        #link = 'https://smashmath.github.io/' + path.split(parent_dir)[1]
         # write the link to the output file
         output.write(file + ':\n\t' + link + '\n')
+        # write the Canvas embed HTML to the output file
+        embed_code = (
+            f'<iframe style="border: none;" title="embedded content" '
+            f'src="{link}" width="100%" height="500px"></iframe>\n'
+        )
+        # write the embed code to the output file
+        output.write(embed_code)
     # close the output file
     output.close()
     
