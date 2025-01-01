@@ -1,0 +1,6 @@
+frontpage.html:
+	https://smashmath.github.io/\html/frontpage.html
+introduction.html:
+	https://smashmath.github.io/\html/introduction.html
+template.html:
+	https://smashmath.github.io/\html/template.html
