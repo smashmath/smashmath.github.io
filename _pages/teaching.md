@@ -13,6 +13,11 @@ Classes I was/am a TA for.
 
 ---
 
+## 2025
+
+### Winter
+- Discrete Math (Four Sections)
+
 ## 2024
 
 ### Spring
