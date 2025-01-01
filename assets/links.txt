@@ -1,6 +1,9 @@
 frontpage.html:
-	https://smashmath.github.io/\html/frontpage.html
+	https://smashmath.github.io/assets/html/frontpage.html
+<iframe style="border: none;" title="embedded content" src="https://smashmath.github.io/assets/html/frontpage.html" width="100%" height="500px"></iframe>
 introduction.html:
-	https://smashmath.github.io/\html/introduction.html
+	https://smashmath.github.io/assets/html/introduction.html
+<iframe style="border: none;" title="embedded content" src="https://smashmath.github.io/assets/html/introduction.html" width="100%" height="500px"></iframe>
 template.html:
-	https://smashmath.github.io/\html/template.html
+	https://smashmath.github.io/assets/html/template.html
+<iframe style="border: none;" title="embedded content" src="https://smashmath.github.io/assets/html/template.html" width="100%" height="500px"></iframe>
