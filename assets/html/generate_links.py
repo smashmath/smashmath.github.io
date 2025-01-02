@@ -21,10 +21,7 @@ def generate_links():
         # get the path to the file
         path = current_dir + '/' + file
         # we need to replace the backslashes with forward slashes
-        #current_dir_slash = current_dir.replace('\\', '/')
         path = path.replace('\\', '/')
-        #parent_dir = parent_dir.replace('\\', '/')
-        # get the link to the file
         # replace C:/ with https://
         link = path.replace('C:/', 'https://')
         #link = 'https://smashmath.github.io/' + path.split(parent_dir)[1]
