@@ -13,7 +13,8 @@ def generate_links():
     # get the list of files in the current directory
     files = os.listdir(current_dir)
     # open the output file
-    output = open(parent_dir + '/links.txt', 'w')
+    #output = open(parent_dir + '/links.txt', 'w')
+    output = open(current_dir + '/links.txt', 'w')
     # iterate through the files
     for file in files:
         if not file.endswith('.html'):
@@ -22,8 +23,9 @@ def generate_links():
         path = current_dir + '/' + file
         # we need to replace the backslashes with forward slashes
         path = path.replace('\\', '/')
-        # replace C:/ with https://
+        # replace C:/ or E:/ with https://
         link = path.replace('C:/', 'https://')
+        link = path.replace('E:/', 'https://')
         #link = 'https://smashmath.github.io/' + path.split(parent_dir)[1]
         # write the link to the output file
         output.write(file + ':\n\t' + link + '\n')
